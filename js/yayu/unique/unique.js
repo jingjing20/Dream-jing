@@ -5,6 +5,7 @@
  */
 // function unique(arr){    es5
 // function 关键字没有了 代替的是es6箭头函数 (参数) => {}
+
 let fn;
 console.log(typeof fn);     //类型未定义的
 fn =null;
