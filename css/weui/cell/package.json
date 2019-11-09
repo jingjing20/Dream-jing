@@ -1,0 +1,13 @@
+{
+  "name": "cell",
+  "version": "1.0.0",
+  "description": "- 界面的宏观视角 结构>组件(cell)\r     组件：界面构成的基础 有了组件后就可以像拼积木一样搭建页面\r     结构的套路\r      weui-cell  开启一个组件\r      weui-cell__hd\r      weui-cell__bd\r      weui-cell__ft\r      hd + bd + ft\r      __ 两个下划线表示子元素\r      BEM Block Element Modifier 国际命名规范",
+  "main": "index.js",
+  "scripts": {
+    "dev":"live-server",
+    "styl":"stylus -w cell.styl -o cell.css"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
