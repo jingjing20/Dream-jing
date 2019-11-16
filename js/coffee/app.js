@@ -10,8 +10,6 @@ Beverage.prototype.boilWater = function(){
 Beverage.prototype.brew = function(){
     //空着
 }
-
-
 Beverage.prototype.pourInCup = function() {}
 
 Beverage.prototype.addCondiments = function() {}
