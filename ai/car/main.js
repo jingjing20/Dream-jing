@@ -1,5 +1,5 @@
 const fs = require('fs');
-const image = fs.readFileSync('./car3.jpg').toString('base64');     //readFileSync 等待完成在继续执行 像回调函数一样的效果
+const image = fs.readFileSync('./car4.jpg').toString('base64');     //readFileSync 等待完成在继续执行 像回调函数一样的效果
 
 const AipOccClient = require('baidu-aip-sdk').ocr;
 
