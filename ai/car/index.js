@@ -2,7 +2,7 @@
 const fs = require('fs');
 const AipImageClassifyClient = require("baidu-aip-sdk").imageClassify;
 //console.log('hello node');
-const image = fs.readFileSync('car4.jpg').toString("base64");    //base64是图片一种新的文件格式
+const image = fs.readFileSync('car3.jpg').toString("base64");    //base64是图片一种新的文件格式
 
 //console.log(image);
 const client = new AipImageClassifyClient('17711936','HXpkTYaH7kYAexripSQYLA8a','NUBEcFLwgvDdGIb7qEPcn9WpFdwr1k99');
