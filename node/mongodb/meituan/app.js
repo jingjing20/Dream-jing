@@ -4,18 +4,16 @@ const bodyParser = require('body-parser');
 // 连数据库
 const MongoClient = require('mongodb').MongoClient;
 const ObjectID = require('mongodb').ObjectID;
-const url = 'mongodb://192.168.31.129:27017/meituan';
+const url = 'mongodb://172.22.146.68:27017/jingjing';
 let dbo;
-MongoClient.connect(url, {
-  useNewUrlParser: true
-}, function(err, db) {
+MongoClient.connect(url, {useNewUrlParser: true}, function(err, db) {
   if (err) {
     console.log(err);
     return;
   }
   dbo = db;
   console.log('数据库连接成功');
-})
+});
 const app = express();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
