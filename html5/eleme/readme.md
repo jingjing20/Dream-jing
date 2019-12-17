@@ -20,4 +20,13 @@
 - inline-block 考点来了
   inline 没有设置宽高 兄弟间相安无事
   block   兄弟间换行
-  两列式布局    inline-block  副作用 兄弟间会产生间隙
+  两列式布局 inline-block  副作用 兄弟间会产生间隙
+  解决 1、设置父元素的font-size为0  2、让两个兄弟元素盒子紧靠在一起 影响结构的可读性
+
+- stylus 向css提供了函数功能
+    利用返回值的叫函数
+    要复用css代码 完成了css模块化   mixin 混合
+
+- 图片 手机的屏幕像素
+@media  条件 (-webkit-min-device-pixel-ration:3)
+图片的命名  ...@2x.png  ...@3x.png
