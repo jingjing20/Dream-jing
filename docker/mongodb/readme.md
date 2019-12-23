@@ -21,3 +21,4 @@
 ## mongodb shell交互
 - use tutorial; 新建一个collection
 - db.users.insert({username: 'smith'}); 直接建立users集合(collection)同时插入一条数据
+- db.users.find();  查找所有集合元素
