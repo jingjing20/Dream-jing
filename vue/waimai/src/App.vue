@@ -12,8 +12,8 @@
         <router-link to="/seller">商家</router-link>
       </div>
     </div>
+    <!-- 匹配src下router中定义的component -->
     <router-view/>
-    <v-footer :jinghao="jinghao"></v-footer>
   </div>
 </template>
 <script>
@@ -32,9 +32,6 @@ export default {
           return queryParam.id
         })()
       },
-      jinghao: {
-        name: '浩浩'
-      }
     }
   },
   components: {
