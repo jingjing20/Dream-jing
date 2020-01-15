@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>TodoList</title>
+    <script src="./vue.js"></script>
+</head>
+
+<body>
+    <div id="root">
+        <input type="text" v-model="inputValue" />
+        <button @click="handleBtnClick">提交</button>
+        <ul>
+            <!-- <li v-for="item in List">{{item}}</li> -->
+            <todo-item v-bind:content="item" v-for="item in List"></todo-item>
+        </ul>
+    </div>
+
+    <script>
+        // 全局组件的使用
+        // Vue.component("TodoItem", {
+        //     props: ['content'],
+        //     template: "<li> {{content}} </li>"
+        // })
+
+        // 局部组件的使用需要在根节点中定义即代码36-38
+        var TodoItem = {
+            props: ['content'],
+            template: "<li>{{content}}</li>"
+        }
+        var app = new Vue({
+            el: '#root',
+            components: {
+                TodoItem: TodoItem
+            },
+            data: {
+                List: [],
+                inputValue: ''
+            },
+            methods: {
+                handleBtnClick: function() {
+                    this.List.push(this.inputValue)
+                    this.inputValue = ''
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
