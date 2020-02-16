@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // js主动向服务器端发送请求 返回数据
+    const xhr = new XMLHttpRequest();
+    xhr.open('GET','http://localhost:1234');
+    xhr.send();
+    // xhr到底是什么？ 谁派来的？
+    xhr.onload = (e) => { //事件监听 event loop机制
+      console.log(e.target.response);
+    }
+    // UI 主要渲染
+    console.log('jingjing')
+  </script>
+</body>
+</html>
