@@ -17,7 +17,7 @@ var Wallet = (function() {
     balance = 0;
     balanceLastModifiedTime = +new Date();
     //私有方法 
-    // public 才可以让外界使用这个对象上的方法和属性 
+    // public 才可以让外界使用这个对象上的方法和属性
     // 私有方法
     // 封闭了检查的实现， 外界不需要了解
     // 封装 -》 私有  用类的人，不需要了解细节
@@ -61,7 +61,7 @@ var Wallet = (function() {
 var hyWallet = new Wallet();
 console.log(hyWallet.getId());
 hyWallet.increaseBalance(200);
-hyWallet.decreateBalance(10);
+hyWallet.decreateBalance(100);
 console.log(hyWallet.getBalance());
 //得用闭包 创建类，闭包升级学习
 console.log(hyWallet.desc);
