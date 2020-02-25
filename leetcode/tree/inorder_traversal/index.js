@@ -21,8 +21,8 @@ var inorderTraversal = function(root) {
   let arr = [];
   const inorder = root => {
     if(root === null) return null;    //退出条件
-    inorder(root.left);
     arr.push(root.val);
+    inorder(root.left);
     inorder(root.right);
   }
   inorder(root);    //递归方法
