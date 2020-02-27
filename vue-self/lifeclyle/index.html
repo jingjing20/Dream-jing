@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Vue-LifeClyle</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="app" class="jing">
+        <p>{{message}}</p>
+        <keep-alive>
+            <jh-component msg="2017年6月9日" v-if="show"></jh-component>
+        </keep-alive>
+    </div>
+</body>
+<script>
+    var haohao = {
+        template: '<div>from haohao: {{msg}}</div>',
+        props: ['msg'],
+        deactivated: function() {
+            console.log('component deactivated!');
+        },
+        activated: function() {
+            console.log('component activated');
+        }
+    };
+    var app = new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                message: 'jingjing',
+                show: true //控制子组件是否显示
+            };
+        },
+        beforeCreate: function() {
+            console.group('beforeCreate Vue实例创建前的状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(state);
+        },
+        created: function() {
+            console.group('created Vue实例创建完毕后状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(state);
+        },
+        beforeMount: function() {
+            console.group('beforeMount 挂载前状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(this.$el);
+            console.log(state);
+        },
+        mounted: function() {
+            console.group('mounted 挂载后状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(this.$el);
+            console.log(state);
+        },
+        beforeUpdate: function() {
+            console.group('beforeUpdate 更新前状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(this.$el);
+            console.log(state);
+            console.log('beforeUpdate = ' + document.getElementsByTagName('p')[0].innerHTML);
+        },
+        updated: function() {
+            console.group('updated 更新完成状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(this.$el);
+            console.log(state);
+            console.log('Updated = ' + document.getElementsByTagName('p')[0].innerHTML);
+        },
+        beforeDestroy: function() {
+            console.group('beforeDestroy 销毁前状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(this.$el);
+            console.log(state);
+        },
+        destroyed: function() {
+            console.group('destroyed 销毁完成状态————————————————————');
+            var state = {
+                'el': this.$el,
+                'data': this.$data,
+                'message': this.message
+            }
+            console.log(this.$el);
+            console.log(state);
+        },
+        components: {
+            'jh-component': haohao
+        }
+    });
+</script>
+
+<style>
+    .jing {
+        font-size: 50px;
+        font-weight: bolder;
+    }
+</style>
+
+</html>
