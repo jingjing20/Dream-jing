@@ -1,42 +1,40 @@
 <template>
   <div id="app">
-    <el-alert
-    title="错误提示的文案"
+    <carousel height="150px">
+      <carousel-item v-for="item in 4" :key="item">
+        <h3 class="small">{{ item }}</h3>
+      </carousel-item>
+    </carousel>
+    <!-- <el-alert
+    title="成功提示的文案"
     type="error"
-    :showIcon="false"
     >
-    </el-alert>
-    <router-view/>
+    </el-alert> -->
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
   </div>
 </template>
-<script>
-import ElAlert from './components/ElAlert'
 
+<script>
+// import ElAlert from './components/ElAlert.vue'
+// import Carousel from './components/carousel/index';
+// import CarouselItem from './components/carousel-item/index';
 export default {
+  name: 'App',
   components: {
-    ElAlert,
+    // ElAlert
+    // 'carousel': Carousel,
+    // 'carousel-item': CarouselItem
   }
 }
 </script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+*{
+  margin: 0;
+  padding: 0;
 }
-
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+html,body{
+  background:green;
 }
 </style>
