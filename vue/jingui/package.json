@@ -1,0 +1,36 @@
+{
+  "name": "jinghaoui",
+  "version": "0.1.0",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lib": "vue-cli-service build --target lib --name jingui --dest lib packages/index.js"
+  },
+  "description": "设计的第一个Vue组件",
+  "keywords": [
+    "component",
+    "components",
+    "frontend",
+    "vue",
+    "vue-component",
+    "ui",
+    "Button",
+    "婧婧"
+  ],
+  "homepage": "https://github.com/jingjing20",
+  "license": "MIT",
+  "dependencies": {
+    "core-js": "^3.6.4",
+    "vue": "^2.6.11"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^4.2.0",
+    "@vue/cli-service": "^4.2.0",
+    "vue-template-compiler": "^2.6.11"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ],
+  "main": "lib/jingui.umd.min.js"
+}

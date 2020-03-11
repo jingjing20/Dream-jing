@@ -18,14 +18,15 @@
 	+= 赋值运算符也可用于相加（级联）字符串：
 	相加两个数字，将返回和，但对一个数字和一个字符串相加将返回一个字符串
 
-在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返回 undefined。
+
+- 在 JavaScript 中，没有值的变量，其值是 undefined。typeof 也返回 undefined。
 
 	空值与 undefined 不是一回事。
 
 	空的字符串变量既有值也有类型。      var car = "";                // 值是 ""，类型是 "string"
 
 
-Null
+- Null
 
 	在 JavaScript 中，null 是 "nothing"。它被看做不存在的事物。
 
@@ -43,10 +44,10 @@ Null
 	null === undefined            // false
 	null == undefined             // true
 
-typeof 运算符把数组返回为 "object"，因为在 JavaScript 中数组即对象。
+- typeof 运算符把数组返回为 "object"，因为在 JavaScript 中数组即对象。
 
 # charCodeAt() 与 charAt()
-    charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。
+-   charCodeAt() 方法可返回指定位置的字符的 Unicode 编码。这个返回值是 0 - 65535 之间的整数。
     方法 charCodeAt() 与 charAt() 方法执行的操作相似，只不过前者返回的是位于指定位置的字符的编码，而后者返回的是字符子串。
 
     var jing = "abc";

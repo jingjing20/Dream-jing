@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h1>婧宝贝快出来！</h1>
+  <img width="828" height="620"
+  src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/AABEIAAcACgMBEQACEQEDEQH/xAGiAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgsQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+gEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoLEQACAQIEBAMEBwUEBAABAncAAQIDEQQFITEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP6g/iaf+CmNtqWrf8Kz+HMNxZDWIYbKWX4geFLgXejza5Al3eW0fiH4xWQsp4dGe5uYVlsUCTxRRLp8yyG0H2eFx3DyhGOIw+HvGm25Swspc04U21D93QT/AHs0qam5NU3L2klJRafzmKwucuq3QrzUHJRShVUbKc1H2l6lZ6UYv2rpqN6qi6UXByUo+waFof7bLaHoza1Ldw6y2lacdWhHiDwvIItTNnCb+MPb+KngcJdeaoeB2hYDMbMhUnjqY3JnUm4YShGDnJxSpSsottxSvSvZKy11OiGFzRQipYxuSjFSdt2krv4+rP8A/9k="
+   alt="" data-src="/jing.jpg" class="lazyload">
+  <script>
+  window.onload = function() {
+    const img = document.querySelector('.lazyload');
+    const real_src = img.getAttribute('data-src');
+    const oImg = document.createElement('img');
+    oImg.onload = function() {
+      setTimeout(() => {
+        img.src = real_src
+      }, 2000)
+    }
+    oImg.src = real_src;
+  }
+  </script>
+</body>
+</html>
