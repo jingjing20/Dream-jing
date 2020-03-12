@@ -59,28 +59,33 @@ export default new Vuex.Store({
     ]
   },
   mutations: {
-    setUsers(state, payload) {      // 写操作 唯一地方
+    setUsers(state, payload) { // 写操作 唯一地方
       state.users = payload
     }
   },
   actions: { // 写入状态的第一步
-    // 与api 通信的地方`
+    // 更api 通信的地方`
     fetchUsers(context) {
       api
         .fetchUsers((users)=> {
-          console.log(users);
+          // console.log(users);
           // 写入state,   严格一些 写一个条子 流程来
           context.commit('setUsers', users)
         })
     },
-    
+    queryTag(context, evt) {
+      console.log(arguments);
+      const tag = evt.target.value;
+      // console.log(tag);
+      api
+        .fetchUsersByjing(tag, (users) => {
+          context.commit('setUsers', users)
+        })
+    }
   },
   getters: {  // state computed 函数
     getUsers(state) { // vuex 会给getters  state  读操作
-      return state.users.map((user, index) => {
-        user.id = user.address.pincode + index
-        return user
-      })
+      return state.users
     }
   },
   modules: {
