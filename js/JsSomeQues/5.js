@@ -1,6 +1,6 @@
 // 统计一个字符串中出现最多的字符。
 
-var str = 'wangxiaoaiwangxiaoting';
+var str = 'jingjinghehaohao';
 var o = {};
 for (var i = 0; i < str.length; i++) {
     var char = str.charAt(i);
