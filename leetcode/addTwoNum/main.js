@@ -2,6 +2,19 @@ function ListNode(val) {
   this.val = val;
   this.next = null;
 }
+
+var a1 = new ListNode(5);
+var a2 = new ListNode(0);
+var a3 = new ListNode(2);
+a1.next = a2;
+a2.next = a3;
+
+var a4 = new ListNode(2);
+var a5 = new ListNode(9);
+var a6 = new ListNode(8);
+a4.next = a5;
+a5.next = a6;
+
 var addTwoNumbers = function(l1, l2) {
   let p1 = l1
   let p2 = l2
@@ -26,6 +39,6 @@ var addTwoNumbers = function(l1, l2) {
   return dummy.next
 };
 
-console.log(addTwoNumbers([1,2,5,3],[2,8,3,1]));
+console.log(addTwoNumbers(a1,a4));
 
   
