@@ -1,19 +1,16 @@
-# vuex-shop
+hashTable 写文章
 
-## Project setup
-```
-npm install
-```
+node 日志  
+  /api
+  /router 
+  mongodb 
+  hashmap  url  key  count: 加起来
+  排序  
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+  Go   two sum 
+  vue 全栈    
 
-### Compiles and minifies for production
-```
-npm run build
-```
+vuex 官方  尤  vuex demo 
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+node  routes? 
+app.js 路由模块的设计 单独的放到routes
