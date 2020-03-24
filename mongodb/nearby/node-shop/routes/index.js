@@ -1,7 +1,7 @@
 const express = require('express');
 const shop = express.Router();
 const db = require('../db/db.js');
-const Shop = require('../models/shop.js');
+const Shop = require('../models/shops.js');
 
 // 2d spare 是mongodb 内建的， 独有的功能
 // 1. NOSQL 
@@ -25,7 +25,7 @@ shop.get('/', async(req, res) => {
 shop.post('/', async(req, res) => {
   console.log('---shops');
   const fjnz = new Shop({
-    name: '大崦村',
+    name: '崦村',
     location: [113.97439,26.980026]
   });
   fjnz

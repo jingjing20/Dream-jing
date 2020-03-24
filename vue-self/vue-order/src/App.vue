@@ -1,20 +1,13 @@
 <template>
   <div id="app">
-    <!-- <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/> -->
     <h1>订单管理</h1>
-    <!-- el-form   -->
     <el-table
       v-loading="listLoading"
-      :data="list"
-      style="width: 100%">
+      :data="list">
       <el-table-column label="ID" 
       prop="_id"
       align="center"
-      width="120">
+      width="300">
         <template slot-scope="{row}">
           <span>{{row._id}}</span>
         </template>
@@ -22,7 +15,7 @@
       <el-table-column label="Name" 
       prop="name"
       align="center"
-      width="300">
+      width="200">
         <template slot-scope="{row}">
           <span>{{row.name}}</span>
         </template>
@@ -38,7 +31,7 @@
       <el-table-column label="状态" 
       prop="status"
       align="center"
-      width="200">
+      width="100">
         <template slot-scope="{row}">
           <span>{{row.status}}</span>
         </template>
@@ -46,7 +39,7 @@
       <el-table-column label="邮费" 
       prop="shippingFee"
       align="center"
-      width="200">
+      width="250">
         <template slot-scope="{row}">
           <span>{{row.shippingFee}}</span>
         </template>
@@ -54,7 +47,7 @@
       <el-table-column label="单价" 
       prop="total"
       align="center"
-      width="200">
+      width="250">
         <template slot-scope="{row}">
           <span>{{row.total}}</span>
         </template>
@@ -102,26 +95,24 @@ export default {
   data() {
     return {
       page: 1,
-      total: 100,
+      total: 0,
       limit: 20,
       listLoading: true, //加载数据中
       list: [
-        
       ]
     }
   },
   mounted() {
-    // setTimeout(() => {
-    //   this.listLoading = false
-    // }, 1000)
-    axios.post('/api/orders', {
+    axios.get('/api/orders', {
       params: {
-        // 分页
+        limit: this.limit,
+        page: this.page
       }
     })
-    .then(res => {
-      // console.log(res);
-      this.list = res.data.orders
+    .then((res) => {
+      console.log(res);
+      this.list = res.data.result
+      this.total = res.data.total
       setTimeout(() => {
         this.listLoading = false
       }, 1000)
