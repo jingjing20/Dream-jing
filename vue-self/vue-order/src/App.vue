@@ -1,127 +1,128 @@
 <template>
   <div id="app">
-    <h1>订单管理</h1>
-    <el-table
-      v-loading="listLoading"
-      :data="list">
-      <el-table-column label="ID" 
-      prop="_id"
-      align="center"
-      width="300">
+    <div class="jing">
+      按作者查找:
+      <el-input v-model="listQuery.author" placeholder="author"
+      style="width:200px;" class="filter-item"
+      @keyup.enter.native="getList"
+      ></el-input>
+      按标题查找:
+      <el-input v-model="listQuery.title" placeholder="title"
+      style="width:200px;" class="filter-item"
+      @keyup.enter.native="getList"
+      ></el-input>
+      按 id 排序：
+      <template>
+        <el-select v-model="value" placeholder="请选择" @change="sortbyId">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+            >
+          </el-option>
+        </el-select>
+      </template>
+    </div>
+    <el-table :data="list">
+      <el-table-column label="ID" prop="id" 
+        align="center" width="80">
+      </el-table-column>
+      <el-table-column label="author" prop="author" 
+        align="center" width="200">
         <template slot-scope="{row}">
-          <span>{{row._id}}</span>
+          <span class="link-type">{{row.author}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="Name" 
-      prop="name"
-      align="center"
-      width="200">
+      <el-table-column label="Title" prop="title" 
+        align="center" width="300">
         <template slot-scope="{row}">
-          <span>{{row.name}}</span>
+          <span class="link-type">{{row.title}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="OrderDate" 
-      prop="orderDate"
-      align="center"
-      width="400">
+      <el-table-column label="display_time" prop="display_time" 
+        align="center" width="300">
         <template slot-scope="{row}">
-          <span>{{row.orderDate}}</span>
+          <span class="link-type">{{row.display_time}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="状态" 
-      prop="status"
-      align="center"
-      width="100">
+
+      <el-table-column label="status" prop="status" 
+        align="center" width="300">
         <template slot-scope="{row}">
-          <span>{{row.status}}</span>
+          <span class="link-type">{{row.status}}</span>
         </template>
       </el-table-column>
-      <el-table-column label="邮费" 
-      prop="shippingFee"
-      align="center"
-      width="250">
+      
+      <el-table-column label="pageviews" prop="pageviews" 
+        align="center" width="300">
         <template slot-scope="{row}">
-          <span>{{row.shippingFee}}</span>
-        </template>
-      </el-table-column>
-      <el-table-column label="单价" 
-      prop="total"
-      align="center"
-      width="250">
-        <template slot-scope="{row}">
-          <span>{{row.total}}</span>
+          <span class="link-type">{{row.pageviews}}</span>
         </template>
       </el-table-column>
     </el-table>
-    <el-pagination
-      :current-page.sync="page"
-      :total="total"
-      :pageSize="limit"
+    <el-pagination  
+      @current-change="getList" 
+      :total="total" 
+      :page-size="listQuery.limit"
       layout="total, prev, pager, next"
-      @current-change="handleCurrentChange">
-    </el-pagination>
+      :current-page.sync="listQuery.page"
+    />
   </div>
 </template>
 
 <style>
-.red {
-  color: red;
-}
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
   text-align: center;
-  color: #2c3e50;
 }
-
-#nav {
-  padding: 30px;
+.jing{
+  font-size: 18px;
+  margin-top: 20px;
 }
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.filter-item{
+  margin-left: 5px;
+  margin-right: 10px;
 }
-
-#nav a.router-link-exact-active {
-  color: #42b983;
-}
-
 </style>
+
 <script>
-import axios from 'axios';
+import Axios from 'axios';
 export default {
   data() {
     return {
-      page: 1,
+      list: [],
       total: 0,
-      limit: 20,
-      listLoading: true, //加载数据中
-      list: [
-      ]
+      listLoading: false,
+      listQuery: {
+        limit: 20,
+        page:1,
+        title: '',
+        author:''
+      },
+      options: [{
+          value: -1,
+          label: '降序'
+        }],
+      value: ''
     }
   },
-  mounted() {
-    axios.get('/api/orders', {
-      params: {
-        limit: this.limit,
-        page: this.page
-      }
-    })
-    .then((res) => {
-      console.log(res);
-      this.list = res.data.result
-      this.total = res.data.total
-      setTimeout(() => {
-        this.listLoading = false
-      }, 1000)
-    })
-    
+  created() {
+    this.getList()
   },
   methods: {
-    handleCurrentChange(page) {
-      console.log(page);
+    getList() {
+      Axios.get('/vue-element-admin/article/list', {
+        params: this.listQuery, // 查询对象  发过去
+        value: this.value
+      })
+      .then(response => {
+        console.log(response);
+        this.list = response.data.list
+        this.total = response.data.total
+      })
+    },
+    sortbyId() {
+      this.list.reverse();
     }
   }
 }
