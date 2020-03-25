@@ -1,3 +1,5 @@
+// 变量提升
+
 var foo = function () {
 
   console.log('foo1');

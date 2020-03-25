@@ -1,3 +1,5 @@
+// 函数提升
+
 function foo() {
 
   console.log('foo1');
