@@ -45,8 +45,11 @@ Mock.mock(new RegExp('/vue-element-admin/article/list'), 'get', (config) => {
     }
     return true;
   });
-
-  // mockList = mockList
+  // console.log(value)
+  if(value) {
+    value == 'asc' && mockList.sort((a, b) => (a.id) - (b.id))
+    value == 'desc' && mockList.sort((a, b) => (b.id) - (a.id))
+  }
 
   const pageList =  mockList.filter((item, index) => 
   index < limit *page && index >= limit *(page-1));//某页数据 

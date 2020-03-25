@@ -97,10 +97,14 @@ export default {
         limit: 20,
         page:1,
         title: '',
-        author:''
+        author:'',
+        value:''
       },
       options: [{
-          value: -1,
+          value: 'asc',
+          label: '升序'
+        },{
+          value: 'desc',
           label: '降序'
         }],
       value: ''
@@ -113,7 +117,6 @@ export default {
     getList() {
       Axios.get('/vue-element-admin/article/list', {
         params: this.listQuery, // 查询对象  发过去
-        value: this.value
       })
       .then(response => {
         console.log(response);
@@ -122,7 +125,9 @@ export default {
       })
     },
     sortbyId() {
-      this.list.reverse();
+      // this.list.reverse();
+      this.listQuery.value = this.value
+      this.getList()
     }
   }
 }
