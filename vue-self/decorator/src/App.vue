@@ -2,12 +2,12 @@
   <div id="app">
     <div class="jing">
       按作者查找:
-      <el-input v-model="listQuery.author" placeholder="author"
+      <el-input v-model="listQuery.city" placeholder="city"
       style="width:200px;" class="filter-item"
       @keyup.enter.native="getList"
       ></el-input>
       按标题查找:
-      <el-input v-model="listQuery.title" placeholder="title"
+      <el-input v-model="listQuery.state" placeholder="status"
       style="width:200px;" class="filter-item"
       @keyup.enter.native="getList"
       ></el-input>
@@ -25,21 +25,15 @@
       </template>
     </div>
     <el-table :data="list">
-      <el-table-column label="ID" prop="id" align="center" width="80"></el-table-column>
-      <el-table-column label="author" prop="author" align="center" width="150"></el-table-column>
-      <el-table-column label="title" prop="title" align="center" width="300"></el-table-column>
-      <el-table-column label="display_time" prop="display_time" align="center" width="200"></el-table-column>
-      <el-table-column label="status" prop="status" 
-        align="center" width="200">
-      </el-table-column>
-      
-      <el-table-column label="pageviews" prop="pageviews" 
-        align="center" width="100">
-      </el-table-column>
-
-      <el-table-column label="操作">
+      <el-table-column label="id" type="index" align="center" width="100"></el-table-column>
+      <el-table-column label="orderId" prop="_id" align="center" width="220"></el-table-column>
+      <el-table-column label="city" prop="city" align="center" width="200"></el-table-column>
+      <el-table-column label="userId" prop="userId" align="center" width="150"></el-table-column>
+      <el-table-column label="country" prop="country" align="center" width="200"></el-table-column>
+      <el-table-column label="status" prop="status" align="center" width="200"></el-table-column>
+      <el-table-column label="操作" width="200">
         <template slot-scope="scope">
-          <el-button size="mini" type="danger" @click="onDel(scope.row)">删除</el-button>
+          <el-button size="mini" type="danger" @click="handleDelete(scope.$index, scope.row)">删除</el-button>
         </template>
       </el-table-column>
     </el-table>
@@ -54,9 +48,6 @@
 </template>
 
 <style>
-*{
-  text-align: center;
-}
 .jing{
   font-size: 18px;
   margin-top: 20px;
@@ -69,6 +60,23 @@
 
 <script>
 import Axios from 'axios';
+import { MessageBox } from 'element-ui';
+function confirmation(target, name, descriptor) {
+  console.log(target, name, descriptor);
+  let oldValue = descriptor.value;
+  console.log(oldValue)
+  descriptor.value = function(...args) {
+    console.log(args);
+    MessageBox.confirm('此操作将永久删除该文件, 是否继续?', '提示',{type: 'warning'})
+      .then(oldValue.bind(this, ...args)).then(()=> {
+        this.$message.success('删除成功！')
+      })
+      .catch((err) => {
+        this.$message.info('您取消了操作！')
+      })
+  }
+  return descriptor;
+}
 export default {
   data() {
     return {
@@ -76,11 +84,8 @@ export default {
       total: 0,
       listLoading: false,
       listQuery: {
-        limit: 20,
-        page:1,
-        title: '',
-        author:'',
-        value:''
+        page: 1,
+        limit: 20
       },
       options: [{
           value: 'asc',
@@ -97,12 +102,12 @@ export default {
   },
   methods: {
     getList() {
-      Axios.get('/vue-element-admin/article/list', {
+      Axios.get('/api/orders', {
         params: this.listQuery, // 查询对象  发过去
       })
       .then(response => {
         console.log(response);
-        this.list = response.data.list
+        this.list = response.data.result
         this.total = response.data.total
       })
     },
@@ -110,7 +115,11 @@ export default {
       // this.list.reverse();
       this.listQuery.value = this.value
       this.getList()
-    }
+    },
+    @confirmation
+    handleDelete(index, row) {
+      this.list.splice(index, 1)
+    },
   }
 }
 </script>
