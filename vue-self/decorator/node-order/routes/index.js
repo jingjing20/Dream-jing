@@ -16,10 +16,6 @@ orders.get('/', (req, res) => {
   let { page = 1, limit = 20 } = req.query; //业务经验
   page = parseInt(page);
   limit = parseInt(limit);
-  // res.json({
-  //   page, 
-  //   limit
-  // })
   Order.countDocuments({}, (err, count) => {
     if (err) {
       res.json({
