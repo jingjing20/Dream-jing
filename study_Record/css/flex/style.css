@@ -1,0 +1,19 @@
+.container{
+  display: flex;
+  height: 500px;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.item-2{
+  align-self: center;
+}
+.item-3{
+  align-self: flex-end;
+}
+.item-4{
+  align-self: center;
+}
+.item-6{
+  align-self: center;
+}
+
