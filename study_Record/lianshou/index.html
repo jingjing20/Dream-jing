@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+<div class="header">
+    <h4>header</h4>
+</div>
+
+<div class="container">
+  
+  <div class="left">
+      <h4>left</h4>
+      <p>left-content</p>
+  </div>
+  <div class="middle">
+    <h4>middle</h4>
+    <p>middle-content</p>
+  </div>
+  <div class="right">
+    <h4>right</h4>
+    <p>right-content</p>
+  </div>
+  <div class="right">
+    <h4>right</h4>
+    <p>right-content</p>
+  </div>
+  <div class="right">
+    <h4>right</h4>
+    <p>right-content</p>
+  </div>
+</div>
+
+<div class="footer">
+  <h4>footer</h4>
+</div>
+</body>
+<style>
+.header, .footer {
+  border: 1px solid #333;
+  background: #ccc;
+  text-align: center;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.left {
+  width: 200px;
+  background: red;
+}
+.middle {
+  background: blue;
+  width: 800px;
+}
+
+.right {
+  width: 220px;
+  background: green;
+}
+
+</style>
+</html>
