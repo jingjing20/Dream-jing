@@ -1,4 +1,4 @@
-const css = require('css-loader!./index.css'); 
+const css = require('css-loader ./index.css'); 
 
 const a = 100;
 
