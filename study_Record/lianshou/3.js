@@ -39,12 +39,12 @@ function jing() {
   this.a = 'hao';
 }
 
-let obj = {
-  a: 'jing'
+function obj() {
+  this.a = 'jing';
 };
 // 1、bind
 const Bar = jing.bind(obj);
 // 2、new
 const bar = new Bar();
 
-console.log(obj.a, '--', bar.a) //jing -- hao
+console.log(Bar, '--', bar) //jing -- hao
