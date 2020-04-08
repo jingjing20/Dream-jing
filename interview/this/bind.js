@@ -1,4 +1,7 @@
 Function.prototype.myBind = function (thisObj, ...arg1) {
+  if (typeof this !== "function") {
+    throw new TypeError("not a function");
+  }
   // 第一次调用传参
   let fn = this;
   function jingbind(...arg2) {

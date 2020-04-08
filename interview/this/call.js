@@ -11,11 +11,12 @@ var foo = {
   name: 'Selina'
 }
 var name = 'Chirs';
+name = 'jingjing'
 function bar(job, age) {
   console.log(this.name);
   console.log(job, age);
 }
-bar.call(foo, 'programmer', 20);
+bar.Call(foo, 'programmer', 20);
 // Selina programmer 20
 bar.Call(null, 'teacher', 25);
 // 浏览器环境: Chirs teacher 25; node 环境: undefined teacher 25

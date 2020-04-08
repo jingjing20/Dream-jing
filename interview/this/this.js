@@ -28,7 +28,7 @@ Function.prototype.myBind = function (thisObj, ...arg1) {
     const args = arg1.concat(arg2);
     // this 
     // 因为 this 没有绑定到 cat 上面，并没有做优先级的处理
-    // 判断 是不是 this 调用？？ .target
+    // 判断 是不是 this 调用？
     let isNewCall = this instanceof innerFunc;
     // isNewCall ? 实例 : thisObj
     return fn.call(isNewCall ? this : thisObj, ...args);

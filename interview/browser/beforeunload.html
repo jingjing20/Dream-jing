@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <a href="http://jinghao.xyz">jingjing</a>
+  <!-- 进程 消息 确定文档消息是什么东西？ 漏掉
+  加载新页面前 释放丢掉老页面 -->
+  <form action="" method="post">
+    用户名：<input type="text" name="username" id="user">
+  </form>
+
+  <script>
+    // 假设有个大表单 填写需要比较久 不小心自己点到了超链接 跳转了页面
+    // 表单数据丢失了？？？
+    // 有没有阻止页面重新渲染的方法？ beforeunload
+    var username = '';
+    document.getElementById('user')
+      .addEventListener('change', function (event) {
+        username = event.target.value;
+        console.log(username)
+      })
+
+    window.onbeforeunload = function (event) {
+      if (username) {
+        return confirm('jingjing')
+      }
+    }
+  </script>
+</body>
+
+</html>
