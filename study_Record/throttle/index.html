@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <button id="add">add</button>
+</body>
+
+<script>
+  //封装一个节流函数
+  function throttle(func, wait) {
+    let prev = Date.now();
+
+    return function () {
+      let now = Date.now();
+      if (now - prev > wait) {
+        func();
+        prev = now;
+      }
+    }
+  }
+  const delay = 2000;
+  const add = document.getElementById('add')
+  console.log(add)
+  add.onclick = throttle(function () {
+    console.log('jing')
+  }, delay)
+</script>
+
+</html>
