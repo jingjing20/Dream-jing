@@ -1,20 +1,20 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png" />
-    <SecTion />
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
+    <sec-tion />
+    <parent />
   </div>
 </template>
 
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
 import SecTion from "./view/section";
+import Parent from "./view/parent";
 
 export default {
   name: "App",
   components: {
-    // HelloWorld
-    SecTion
+    SecTion,
+    Parent
   }
 };
 </script>
