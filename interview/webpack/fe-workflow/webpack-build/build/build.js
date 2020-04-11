@@ -1,19 +1,22 @@
 const rimraf = require('rimraf');
 const path = require('path');
-const ora = require('ora'); // 加载指示器
-const chalk = require('chalk');
-// webpack  最基本的  entry output mod 
-// webpack-chain 编程
-// console.log(process.cwd(), __dirname);
-// 项目的根目录下
-// 模块化 立即运行
+const ora = require('ora');   //加载指示器
+const chalk = require('chalk'); //粉笔加颜色
+// webpack 最基本的配置  entry output mode  我们不用这种方式
+// webpack-chain  编程的方法来配置 webpack
+
+// 模块化 base.js 服务于 dev.js build.js  是一个函数 立即执行
 const config = require('./base')();
-// console.log(config);
-const webpack = require('webpack');
+// console.log(config)
+const webpack = require('webpack')
+
+// console.log(path.join(process.cwd()))
 rimraf.sync(path.join(process.cwd(), 'dist'));
+
 const spinner = ora('开始构建项目...');
 spinner.start();
-//进行编译
+
+// 进行编译
 webpack(config.toConfig(), function (err, stats) {
   spinner.stop();
   if (err) throw err
@@ -24,6 +27,7 @@ webpack(config.toConfig(), function (err, stats) {
       children: false,
       chunks: false,
       chunkModules: false
-    }) + '\n\n')
-  console.log(chalk.cyan('build 完成\n'));
+    })
+  )
+  console.log(chalk.cyan('\n build完成！\n'));
 })
