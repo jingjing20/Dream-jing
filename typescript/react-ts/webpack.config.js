@@ -10,8 +10,13 @@ module.exports = {
     extensions: ['.js', '.ts', '.tsx'],   //以后缀名的文件
   },
   entry: {    //webpack 打包入口可以有多个
-    app: './index.ts',   //入口文件
-    vendorStyles: [      //bootstrap css框架 业务代码在变 
+    app: './index.tsx',   //入口文件  业务代码打包入口
+    vendor: [   //框架代码打包
+      'react',
+      'react-dom',
+      'react-router-dom'
+    ],
+    vendorStyles: [      //bootstrap css框架  
       '../node_modules/bootstrap/dist/css/bootstrap.css',
     ],
   },
@@ -22,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.ts$/,    //找文件规则
+        test: /\.tsx?$/,    //找文件规则
         exclude: /node_modules/,    //排除目录
         loader: 'awesome-typescript-loader',    //
         options: {
