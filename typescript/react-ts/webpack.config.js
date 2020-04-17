@@ -27,7 +27,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,    //找文件规则
+        test: /\.tsx?$/,    //找文件规则 正则表达式
         exclude: /node_modules/,    //排除目录
         loader: 'awesome-typescript-loader',    //
         options: {

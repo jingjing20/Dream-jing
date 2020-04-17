@@ -1,22 +1,10 @@
-import * as React from 'react';
-
-
-// class HelloComponent extends React.Component {
-//   render() {
-//     return (
-//       <h2>
-//         hello jingjing!!!
-//       </h2>
-//     )
-//   }
-// }
-
+import * as React from 'react'; // ts 牛逼 静态编译
+// 无状态组件 statelesscomponent
 export const HelloComponent = () => {
-  return (
-    <h2>
-      jingjing
+  // 返回html的函数就是最简单的组件
+  return ( // jsx js in xml 声明式的模板引擎语法，react vue 区别  <template/>
+    <h2 >
+      Hello 阿里浩！
     </h2>
   )
 }
-
-// export default HelloComponent
