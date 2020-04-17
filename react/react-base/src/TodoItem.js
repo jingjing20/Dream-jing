@@ -6,15 +6,25 @@ class TodoItem extends React.Component {
     this.delete = this.delete.bind(this);
   }
   render() {
+    const { content } = this.props;
     return (
       <div onClick={this.delete}>
-        {this.props.content}
+        {content}
       </div>
     )
   }
 
   delete() {
-    this.props.deleteItem(this.props.index)
+    const { deleteItem, index } = this.props;
+    deleteItem(index)
+  }
+
+  componentWillReceiveProps() {
+    console.log('child componentWillReceiveProps')
+  }
+
+  componentWillUnmount() {
+    console.log('componentWillUnmount')
   }
 }
 

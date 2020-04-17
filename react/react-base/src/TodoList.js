@@ -14,6 +14,7 @@ class TodoList extends React.Component {
     this.changeValue = this.changeValue.bind(this)
   }
   render() {
+    console.log('render')
     return (
       <>
         <div>
@@ -23,11 +24,31 @@ class TodoList extends React.Component {
           />
           <button onClick={this.handleBtnClick}>提交</button>
         </div>
-        <ul>
+        <ul ref={(ul) => { this.ul = ul }}>
           {this.getTodoItem()}
         </ul>
       </>
     )
+  }
+  componentWillMount() {
+    console.log('componentWillMount')
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount')
+  }
+  // 是否需要更新 true 代表更新 false 代表不更新
+  shouldComponentUpdate() {
+    console.log('shouldComponentUpdate')
+    return true;
+  }
+
+  componentWillUpdate() {
+    console.log('componentWillUpdate')
+  }
+
+  componentDidUpdate() {
+    console.log('componentDidUpdate')
   }
 
   getTodoItem() {
@@ -55,7 +76,9 @@ class TodoList extends React.Component {
     this.setState((prevState) => ({
       list: [...prevState.list, prevState.inputValue],
       inputValue: ''
-    }))
+    }), () => {
+      console.log(this.ul.querySelectorAll('div').length)
+    })
     // this.setState({
     //   list: [...this.state.list, this.state.inputValue],
     //   inputValue: ''
