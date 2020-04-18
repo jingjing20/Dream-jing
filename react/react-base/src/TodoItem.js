@@ -19,13 +19,13 @@ class TodoItem extends React.Component {
     deleteItem(index)
   }
 
-  componentWillReceiveProps() {
-    console.log('child componentWillReceiveProps')
-  }
+  // componentWillReceiveProps() {
+  //   console.log('child componentWillReceiveProps')
+  // }
 
-  componentWillUnmount() {
-    console.log('componentWillUnmount')
-  }
+  // componentWillUnmount() {
+  //   console.log('componentWillUnmount')
+  // }
 }
 
 export default TodoItem

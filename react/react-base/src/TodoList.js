@@ -14,7 +14,7 @@ class TodoList extends React.Component {
     this.changeValue = this.changeValue.bind(this)
   }
   render() {
-    console.log('render')
+    // console.log('render')
     return (
       <>
         <div>
@@ -30,26 +30,26 @@ class TodoList extends React.Component {
       </>
     )
   }
-  componentWillMount() {
-    console.log('componentWillMount')
-  }
+  // componentWillMount() {
+  //   console.log('componentWillMount')
+  // }
 
-  componentDidMount() {
-    console.log('componentDidMount')
-  }
-  // 是否需要更新 true 代表更新 false 代表不更新
-  shouldComponentUpdate() {
-    console.log('shouldComponentUpdate')
-    return true;
-  }
+  // componentDidMount() {
+  //   console.log('componentDidMount')
+  // }
+  // // 是否需要更新 true 代表更新 false 代表不更新
+  // shouldComponentUpdate() {
+  //   console.log('shouldComponentUpdate')
+  //   return true;
+  // }
 
-  componentWillUpdate() {
-    console.log('componentWillUpdate')
-  }
+  // componentWillUpdate() {
+  //   console.log('componentWillUpdate')
+  // }
 
-  componentDidUpdate() {
-    console.log('componentDidUpdate')
-  }
+  // componentDidUpdate() {
+  //   console.log('componentDidUpdate')
+  // }
 
   getTodoItem() {
     return this.state.list.map((item, index) => {

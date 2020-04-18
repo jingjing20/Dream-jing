@@ -29,7 +29,7 @@ task 的产生可能来自于下面：
 
 
 - 每次从 taskQueue 取出第一个可运行任务，执行，
-- 如果有 microtask queue，那么只要微任务队列不为空，一直运行Microtask，
+- 如果有 microtask queue，那么只要微任务队列不为空，一直运行microtask，
 - 如果需要那么会发生 render
 
 

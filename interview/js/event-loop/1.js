@@ -19,3 +19,4 @@ new Promise(function (resolve) {
     console.log('promise2');
   });
 console.log('script end');
+// async await = 把这个任务放到 promise 的回调里面去

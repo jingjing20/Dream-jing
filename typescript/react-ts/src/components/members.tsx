@@ -24,7 +24,7 @@ export class MembersPage extends React.Component<Props, State> {
   componentDidMount() {   // vue mounted 
     // ts 虽然多写了些代码 , 但是会减少很多调试， 反而省时间
     memberAPI   // 类型
-      .fetchMembers() // 感情化写代码 ts java 步步惊心  promise 
+      .fetchMembers()
       .then(members => {
         console.log(members);
         this.setState({
