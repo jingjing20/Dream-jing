@@ -1,3 +1,5 @@
+//枚举类型
+
 enum Color {
   Red = 1,
   Green = 2,
