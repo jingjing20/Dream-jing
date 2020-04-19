@@ -14,6 +14,7 @@ var trap = function (height) {
             max_right = Math.max(max_right, height[j])
         }
         jing = (jing + Math.min(max_left, max_right)) - height[i]
+        console.log(jing)
     }
     return jing
 };
