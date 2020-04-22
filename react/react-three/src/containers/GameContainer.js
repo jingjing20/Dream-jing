@@ -1,43 +1,62 @@
 import React, { Component } from 'react'
-import * as THREE from 'three' // 组件
-// THREE.js 组件
-import React3 from 'react-three-renderer'
-// three.js 更简单
+import autobind from 'autobind-decorator'
+import THREE, { Vector3 } from 'three'
+import { loadModel } from '../utils/utils'
+import Game from '../components/Game'
+
 export default class GameContainer extends Component {
-  constructor(props, context) {
-    super(props, context)
-    this.cameraPositon = new THREE.Vector3(0, 0, 5) //三维空间
+  constructor() {
+    super()
     this.state = {
+      cameraPosition: new Vector3(0, 5, 0),
+      lookAt: Vector3(0, 0, 0)
     }
+    // this.gameLoop = this.gameLoop.bind(this); 
+  }
+  // react lifeCycle mounted 
+  componentDidMount() {
+    this.mounted = true
+    window.THREE = THREE
+    // 3d 模型  设计师
+    // 有点大
+    loadModel('../../assets/sitepoint-robot.json')
+      .then(geometry =>
+        this.setState({ geometry }))
+    this.requestGameLoop()
+  }
+  requestGameLoop() {
+    // 60 fps 
+    // 1. () =》 {}
+    // 2. bind
+    // 3. 构造函数申明时bind
+    this.reqAnimId = window.requestAnimationFrame(this.gameLoop)
+  }
+  // decorator
+  @autobind
+  gameLoop() {
+    // console.log(this, '+++++++');
   }
   render() {
     const width = window.innerWidth,
       height = window.innerHeight
-    // console.log(width, height)
+    // react jsx 把state 解出来
+    const {
+      cameraPosition,
+      lookAt,
+      geometry
+    } = this.state
     return (
-      <React3
-        mainCamera="camera"
-        width={width}
-        height={height}>
-        <scene>
-          <perspectiveCamera
-            name="camera"
-            fov={75}
-            aspect={width / height}
-            near={0.1}
-            far={1000}
-            position={this.cameraPositon}
-          />
-          <mesh>
-            <boxGeometry
-              width={1}
-              height={1}
-              depth={1}>
-            </boxGeometry>
-            <meshBasicMaterial color={0x00ff00} />
-          </mesh>
-        </scene>
-      </React3>
+      <div>
+        {
+          geometry ? <Game
+            width={width}
+            height={height}
+            cameraPosition={cameraPosition}
+            lookAt={lookAt}
+            geometry={geometry}
+          /> : 'Loading'
+        }
+      </div>
     )
   }
 }
