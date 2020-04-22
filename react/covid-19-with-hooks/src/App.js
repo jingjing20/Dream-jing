@@ -10,13 +10,13 @@ function App() {
 
   useEffect(() => {
     const fetchGlobalStats = async () => {
-      const response = await fetch(`${BASE_URL}/all`);
+      const response = await fetch(`${BASE_URL}/v2/all`);
       const data = await response.json();
       setGlobalStats(data);
     };
 
     fetchGlobalStats();
-    const intervalId = setInterval(fetchGlobalStats, 5000);
+    const intervalId = setInterval(fetchGlobalStats, 10000);
 
     return () => clearInterval(intervalId);
   }, []);
