@@ -1,10 +1,14 @@
 // import "./app.css";
 // console.log('welcome');
 import * as React from 'react';
-import * as ReactDom from 'react-dom';
+import * as ReactDOM from 'react-dom';
+// import { HelloComponent } from './hello';
+import { AppRouter } from './router'; // 根组件的概念
 
-import { App } from './app';
-ReactDom.render(
-  <App />,
+ReactDOM.render(
+  // react hooks , 超越 redux vuex 的新特性， 跨组件共享状态
+  // defaultUserName 可以被组件共享状态 
+
+  < AppRouter />,
   document.getElementById('root')
 )
