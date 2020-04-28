@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
 
 const MouseTracker: React.FC = () => {
   const [positions, setPositions] = useState({ x: 0, y: 0 })
