@@ -25,10 +25,14 @@
 
 <body>
   <button class="jing">jingjing</button>
+  <button class="jing">jing</button>
+  <div class="jing"></div>
 </body>
 <script>
-  let hao = document.querySelector('button')
+  let hao = document.querySelectorAll('button')
   console.log(hao)
+  let a = document.getElementsByClassName('jing')
+  console.log(a)
   let jing = hao.getBoundingClientRect()
   console.log(jing)
   const delay = 2000

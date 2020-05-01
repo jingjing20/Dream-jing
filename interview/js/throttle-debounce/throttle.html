@@ -8,7 +8,8 @@
 </head>
 
 <body>
-  <button id="add">add</button>
+  <!-- <button id="add">add</button> -->
+  <input type="text" id="add">
 </body>
 
 <script>
@@ -27,7 +28,7 @@
   const delay = 2000;
   const add = document.getElementById('add')
   console.log(add)
-  add.onclick = throttle(function () {
+  add.oninput = throttle(function () {
     console.log('jing')
   }, delay)
 </script>

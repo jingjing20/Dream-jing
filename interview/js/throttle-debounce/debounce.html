@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <input type="text">
+  <script>
+    function debounce(func, delay) {
+      var timeout;
+      return function () {
+        clearTimeout(timeout);
+        var context = this, args = arguments
+        timeout = setTimeout(function () {
+          func.apply(context, args);
+        }, delay)
+      };
+    };
+
+    var validate = debounce(function (a) {
+      console.log("change", a.target.value, new Date() - 0)
+    }, 1000);
+
+    // 绑定监听
+    document.querySelector("input").addEventListener('input', validate);
+  </script>
+</body>
+
+</html>
