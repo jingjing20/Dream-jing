@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="div1"></div>
+  <div class="div2"></div>
+  <div class="div3"></div>
+</body>
+<style>
+  /* * {
+    margin: 0;
+    padding: 0;
+  } */
+
+  /*方法一： margin:auto; position: absolute;  */
+  /* .div1 {
+    width: 520px;
+    height: 520px;
+    background: rgb(62, 184, 206);
+    left: 0;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    margin: auto;
+    position: absolute;
+  } */
+
+  /* 方法二： transform: translate(-50%, -50%); left: 50%; top: 50%;*/
+  /* .div2 {
+    width: 520px;
+    height: 520px;
+    background: rgb(226, 108, 220);
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+  } */
+
+  /* 方法三 */
+  .div3 {
+    width: 520px;
+    height: 520px;
+    background: rgb(69, 52, 221);
+    left: 50%;
+    top: 50%;
+    margin-top: -260px;
+    margin-left: -260px;
+    position: absolute;
+  }
+</style>
+
+</html>
