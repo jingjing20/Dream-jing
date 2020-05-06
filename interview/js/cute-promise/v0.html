@@ -1,0 +1,19 @@
+<script>
+  // 回调
+  function test(fn) {
+    setTimeout(() => {
+      fn('jingjing')
+    }, 3000)
+  }
+
+  test(function (val) {
+    console.log(val)
+  })
+
+  // Promise
+  new Promise((resolve, reject) => {
+    resolve(1);
+  }).then((val) => {
+    console.log(val)
+  })
+</script>
