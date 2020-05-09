@@ -1,0 +1,12 @@
+{
+  "name": "mocha",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "test": "mocha test/mocha/data.js"
+  },
+  "dependencies": {
+    "mocha": "^7.1.2",
+    "should": "^13.2.3"
+  }
+}
