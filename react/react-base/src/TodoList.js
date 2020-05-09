@@ -34,9 +34,15 @@ class TodoList extends React.Component {
   //   console.log('componentWillMount')
   // }
 
-  // componentDidMount() {
-  //   console.log('componentDidMount')
-  // }
+  getstate() {
+    let jing = this.state.inputValue
+    console.log(jing)
+  }
+
+  componentDidMount() {
+    console.log('componentDidMount')
+    this.getstate()
+  }
   // // 是否需要更新 true 代表更新 false 代表不更新
   // shouldComponentUpdate() {
   //   console.log('shouldComponentUpdate')
