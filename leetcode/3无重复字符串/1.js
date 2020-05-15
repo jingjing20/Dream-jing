@@ -4,15 +4,15 @@
  */
 var lengthOfLongestSubstring = s => {
   let len = s.length
-  if(len <= 1){
+  if (len <= 1) {
     return len
   }
   let max = 1
   let recode = 0
-  for(let i = 0; i < len; i++){
+  for (let i = 0; i < len; i++) {
     let index = s.indexOf(s[i], recode)
     // console.log(index)
-    if(index < i) {
+    if (index < i) {
       recode = index + 1
     }
     // console.log(recode)
@@ -22,4 +22,4 @@ var lengthOfLongestSubstring = s => {
   return max
 };
 
-console.log(lengthOfLongestSubstring("abb"))
+console.log(lengthOfLongestSubstring("abcabcbb"))
