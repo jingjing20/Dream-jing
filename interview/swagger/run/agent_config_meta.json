@@ -1,0 +1,256 @@
+{
+  "session": {
+    "maxAge": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-session\\config\\config.default.js",
+    "key": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-session\\config\\config.default.js",
+    "httpOnly": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-session\\config\\config.default.js",
+    "encrypt": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-session\\config\\config.default.js"
+  },
+  "security": {
+    "domainWhiteList": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+    "protocolWhiteList": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+    "defaultMiddleware": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+    "csrf": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "type": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "ignoreJSON": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "useSession": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "cookieName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "sessionName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "headerName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "bodyName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "queryName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "refererWhiteList": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xframe": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "hsts": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.local.js",
+      "maxAge": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "includeSubdomains": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "dta": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "methodnoallow": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "noopen": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "nosniff": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "referrerPolicy": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "xssProtection": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "value": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "csp": {
+      "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "policy": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    },
+    "ssrf": {
+      "ipBlackList": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js",
+      "checkAddress": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+    }
+  },
+  "helper": {
+    "shtml": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-security\\config\\config.default.js"
+  },
+  "jsonp": {
+    "limit": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "callback": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-jsonp\\config\\config.default.js",
+    "csrf": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-jsonp\\config\\config.default.js"
+  },
+  "onerror": {
+    "errorPageUrl": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-onerror\\config\\config.default.js",
+    "appErrorFilter": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-onerror\\config\\config.default.js",
+    "templatePath": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-onerror\\config\\config.default.js"
+  },
+  "i18n": {
+    "defaultLocale": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-i18n\\config\\config.default.js",
+    "dirs": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-i18n\\config\\config.default.js",
+    "queryField": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieField": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieDomain": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-i18n\\config\\config.default.js",
+    "cookieMaxAge": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-i18n\\config\\config.default.js"
+  },
+  "watcher": {
+    "type": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-watcher\\config\\config.local.js",
+    "eventSources": {
+      "default": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-watcher\\config\\config.default.js",
+      "development": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-watcher\\config\\config.default.js"
+    }
+  },
+  "customLogger": {
+    "scheduleLogger": {
+      "consoleLevel": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-schedule\\config\\config.default.js",
+      "file": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-schedule\\config\\config.default.js"
+    }
+  },
+  "schedule": {
+    "directory": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-schedule\\config\\config.default.js"
+  },
+  "multipart": {
+    "mode": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "autoFields": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "defaultCharset": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldNameSize": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fieldSize": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fields": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileSize": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "files": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "fileExtensions": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "whitelist": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "tmpdir": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js",
+    "cleanSchedule": {
+      "cron": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-multipart\\config\\config.default.js"
+    }
+  },
+  "development": {
+    "watchDirs": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-development\\config\\config.default.js",
+    "ignoreDirs": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-development\\config\\config.default.js",
+    "fastReady": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-development\\config\\config.default.js",
+    "reloadOnDebug": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-development\\config\\config.default.js",
+    "overrideDefault": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-development\\config\\config.default.js"
+  },
+  "logrotator": {
+    "filesRotateByHour": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "hourDelimiter": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "filesRotateBySize": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFileSize": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxFiles": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "rotateDuration": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js",
+    "maxDays": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-logrotator\\config\\config.default.js"
+  },
+  "static": {
+    "prefix": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-static\\config\\config.default.js",
+    "dir": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-static\\config\\config.default.js",
+    "dynamic": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-static\\config\\config.default.js",
+    "preload": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-static\\config\\config.default.js",
+    "buffer": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-static\\config\\config.default.js",
+    "maxFiles": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-static\\config\\config.default.js"
+  },
+  "view": {
+    "root": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-view\\config\\config.default.js",
+    "cache": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-view\\config\\config.local.js",
+    "defaultExtension": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-view\\config\\config.default.js",
+    "defaultViewEngine": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-view\\config\\config.default.js",
+    "mapping": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg-view\\config\\config.default.js"
+  },
+  "env": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "name": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "keys": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "cookies": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "proxy": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "maxIpsCount": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "maxProxyCount": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "protocolHeaders": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "ipHeaders": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "hostHeaders": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "pkg": {
+    "name": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "scripts": {
+      "dev": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    },
+    "dependencies": {
+      "egg": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "egg-bin": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "baseDir": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "HOME": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "rundir": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "dump": {
+    "ignore": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "confusedConfigurations": {
+    "bodyparser": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "notFound": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "sitefile": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "middlewares": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "httpClient": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "notfound": {
+    "pageUrl": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "siteFile": {
+    "/favicon.ico": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "bodyParser": {
+    "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "formLimit": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "jsonLimit": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "textLimit": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "strict": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "queryString": {
+      "arrayLimit": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "depth": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "parameterLimit": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    },
+    "onerror": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "logger": {
+    "dir": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "encoding": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "env": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "level": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "consoleLevel": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "disableConsoleAfterReady": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "outputJSON": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "buffer": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "appLogName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "coreLogName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "agentLogName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "errorLogName": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "coreLogger": {
+      "consoleLevel": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.local.js"
+    },
+    "allowDebugAtProd": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "httpclient": {
+    "enableDNSCache": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheLookupInterval": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "dnsCacheMaxLength": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "request": {
+      "timeout": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpAgent": {
+      "keepAlive": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    },
+    "httpsAgent": {
+      "keepAlive": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "freeSocketTimeout": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "maxSockets": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "maxFreeSockets": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "meta": {
+    "enable": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "logging": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "coreMiddleware": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "workerStartTimeout": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "serverTimeout": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+  "cluster": {
+    "listen": {
+      "path": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "port": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+      "hostname": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+    }
+  },
+  "clusterClient": {
+    "maxWaitTime": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js",
+    "responseTimeout": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+  },
+  "onClientError": "F:\\github-repositories\\Dream-jing\\interview\\swagger\\node_modules\\egg\\config\\config.default.js"
+}

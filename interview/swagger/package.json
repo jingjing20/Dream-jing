@@ -1,0 +1,10 @@
+{
+  "name": "jing",
+  "scripts": {
+    "dev": "egg-bin dev --port 7008"
+  },
+  "dependencies": {
+    "egg": "^2.26.0",
+    "egg-bin": "^4.14.1"
+  }
+}
