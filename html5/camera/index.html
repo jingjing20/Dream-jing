@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <video src="" id="mainVideo" muted autoplay controls></video>
+  <button id="photoBtn" onclick="cutPhoto()">拍照</button>
+  <canvas class="" id="camera" style="display: none;"></canvas>
+  <img src="https://i2.hdslb.com/bfs/face/3a94f60a7a98406e64ddfdb82d496376fd839d64.jpg@68w_68h.webp" id="photo" alt="">
+  <script>
+    var mainVideo = document.querySelector('#mainVideo')
+    var photoBtn = document.querySelector('#photoBtn')
+    var camera = document.querySelector('#camera')
+    var photo = document.querySelector('#photo')
+    var setting = { audio: true, video: true }
+    function cutPhoto() {
+      console.log('++')
+      camera.width = mainVideo.videoWidth
+      camera.height = mainVideo.videoHeight
+      camera.getContext("2d").drawImage(mainVideo, 0, 0)
+      var image = camera.toDataURL()
+      photo.src = image
+    }
+    function success(data) {
+      mainVideo.srcObject = data
+    }
+    function error(data) {
+      alert(data)
+    }
+    navigator.getUserMedia(setting, success, error)
+  </script>
+</body>
+
+</html>
