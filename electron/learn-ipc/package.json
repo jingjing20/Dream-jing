@@ -1,0 +1,17 @@
+{
+  "name": "learn-ipc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon --watch index.js --exec \"electron .\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "devtron": "^1.4.0",
+    "electron": "^5.0.6",
+    "electron-reload": "^1.4.0"
+  }
+}
