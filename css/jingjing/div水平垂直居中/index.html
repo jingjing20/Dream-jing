@@ -8,18 +8,22 @@
 </head>
 
 <body>
-  <div class="div1"></div>
+  <div class="div1">
+    <div class="jing">
+      <p>jing</p>
+    </div>
+  </div>
   <div class="div2"></div>
   <div class="div3"></div>
 </body>
 <style>
-  /* * {
+  * {
     margin: 0;
     padding: 0;
-  } */
+  }
 
   /*方法一： margin:auto; position: absolute;  */
-  /* .div1 {
+  .div1 {
     width: 520px;
     height: 520px;
     background: rgb(62, 184, 206);
@@ -29,7 +33,13 @@
     top: 0;
     margin: auto;
     position: absolute;
-  } */
+  }
+
+  p {
+    width: 220px;
+    height: 220px;
+    line-height: 220px;
+  }
 
   /* 方法二： transform: translate(-50%, -50%); left: 50%; top: 50%;*/
   /* .div2 {
@@ -43,7 +53,7 @@
   } */
 
   /* 方法三 */
-  .div3 {
+  /* .div3 {
     width: 520px;
     height: 520px;
     background: rgb(69, 52, 221);
@@ -52,6 +62,15 @@
     margin-top: -260px;
     margin-left: -260px;
     position: absolute;
+  } */
+
+  .jing {
+    width: 220px;
+    height: 220px;
+    background: rgb(179, 52, 59);
+    margin-left: 150px;
+    position: absolute;
+    text-align: center;
   }
 </style>
 

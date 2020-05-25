@@ -39,12 +39,35 @@
 // val *= 2; 的执行结果，就是 8 了。 所以，最终的结果就是输出 8 和 8 。
 
 
-var arrayLike = {
-  0: 'OB',
-  1: 'Koro1',
-  length: 2
+// var arrayLike = {
+//   0: 'OB',
+//   1: 'Koro1',
+//   length: 2
+// }
+// Array.prototype.push.call(arrayLike, 'jing', 'hao');
+// console.log(arrayLike) // {"0":"OB","1":"Koro1","2":"添加元素1","3":"添加元素2","length":4}
+
+async function async1() {
+  console.log('async1 start');
+  await async2();
+  console.log('async1 end');
 }
-Array.prototype.push.call(arrayLike, 'jing', 'hao');
-console.log(arrayLike) // {"0":"OB","1":"Koro1","2":"添加元素1","3":"添加元素2","length":4}
+async function async2() {
+  console.log('async2');
+}
 
+console.log('script start');
 
+setTimeout(function () {
+  console.log('setTimeout');
+}, 0)
+
+async1();
+
+new Promise(function (resolve) {
+  console.log('promise1');
+  resolve();
+}).then(function () {
+  console.log('promise2');
+});
+console.log('script end');
