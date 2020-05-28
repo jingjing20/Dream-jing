@@ -3,12 +3,12 @@ function ListNode(val) {
     this.next = null
 }
 
-var reverseList = function(head) {
+var reverseList = function (head) {
     if (!head || !head.next) return head; //空链表或只有一个结点
     let cur = head; //当前结点
     let pre = null; //前驱结点
     while (cur) { //遍历
-        const next = cur.next; // 后继结点
+        let next = cur.next; // 后继结点
         cur.next = pre; //反过来来 将当前结点的指针指向前一个结点 
         // 如果cur 是头结点
         pre = cur; //前驱结点变成当前结点
