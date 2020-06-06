@@ -1,11 +1,23 @@
 import React from 'react'
 import express from 'express';
-import Header from '../components/Header.jsx';
+import Header from '../components/Header.jsx';  //需要
 import { renderToString } from 'react-dom/server';
+import { StaticRouter } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
+import Routes from '../Routes';
+
+
 const app = express();
 app.use(express.static('static'))
+
 app.get('*', (req, res) => {
-  const App = (<Header />)
+  console.log(req.url);
+
+  const App = (
+    <StaticRouter location={req.url}>
+      {renderRoutes(Routes)}
+    </StaticRouter>
+  );
   const htmlStr = renderToString(App);
   console.log(htmlStr)
   res.send(`<!DOCTYPE html>
