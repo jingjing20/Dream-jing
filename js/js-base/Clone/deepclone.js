@@ -10,7 +10,7 @@ function deepClone(obj = {}) {
   let result;   //初始化返回结果
 
   // 判断是对象还是数组
-  if (obj instanceof Array) {
+  if (Array.isArray(obj)) {
     result = [];
   } else {
     result = {}
@@ -26,23 +26,26 @@ function deepClone(obj = {}) {
   return result;  //返回结果
 }
 
-const obj1 = {
-  age: 20,
-  name: 'xxx',
-  address: {
-    city: 'beijing',
-    jing: {
-      love: 'hao',
-      age: 20,
-      address: '永新县'
-    }
-  },
-  arr: ['a', 'b', 'c'],
-}
+// const obj1 = {
+//   age: 20,
+//   name: 'xxx',
+//   address: {
+//     city: 'beijing',
+//     jing: {
+//       love: 'hao',
+//       age: 20,
+//       address: '永新县'
+//     }
+//   },
+//   arr: ['a', 'b', 'c'],
+// }
 
-const obj2 = deepClone(obj1)
-obj2.arr[0] = 'a1'          //改变属性值
-obj2.address.city = 'shanghai'  //改变属性值
-console.log(obj1.address.city)    //测试
-console.log(obj1.arr[0])
-console.log(obj2.address.jing)
+// const obj2 = deepClone(obj1)
+// obj2.arr[0] = 'a1'          //改变属性值
+// obj2.address.city = 'shanghai'  //改变属性值
+// console.log(obj1.address.city)    //测试
+// console.log(obj1.arr[0])
+// console.log(obj2.address.jing)
+
+var a = { a: '1', b: [1, 2, 3, 4, { t: 'test' }], [Symbol()]: 'symbol', d: new Date(), r: RegExp('^\\d$') };
+console.log(deepClone(a))
