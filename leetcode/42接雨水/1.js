@@ -13,7 +13,7 @@ var trap = function (height) {
         for (let j = i; j < length; j++) {
             max_right = Math.max(max_right, height[j])
         }
-        jing = (jing + Math.min(max_left, max_right)) - height[i]
+        jing = jing + (Math.min(max_left, max_right) - height[i])
         console.log(jing)
     }
     return jing

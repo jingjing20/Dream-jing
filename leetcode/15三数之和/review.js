@@ -12,30 +12,29 @@
 // 。。。。。
 var threeSum = function (nums) {
   console.time()
-  const len = nums.length;
-  let jing = [];
-  if (nums == null || len < 3) return jing;
-  nums.sort((a, b) => a - b);
+  let len = nums.length;
+  let result = [];
+  if (nums == null || len < 3) return result;
+  nums = nums.sort((a, b) => a - b);
   for (let i = 0; i < len; i++) {
     if (nums[i] > 0) break;
-    if (i > 0 && nums[i] == nums[i - 1]) continue;  //去重
     let L = i + 1;
     let R = len - 1;
     while (L < R) {
       const sum = nums[i] + nums[L] + nums[R];
-      if (sum == 0) {
-        jing.push([nums[i], nums[L], nums[R]])
-        while (L < R && nums[L] == nums[L + 1]) L++;  //去重
-        while (L < R && nums[R] == nums[R - 1]) R--;  //去重
+      if (sum === 0) {
+        result.push([nums[i], nums[L], nums[R]])
+        while (L < R && nums[L + 1] === nums[L]) L++;
+        while (L < R && nums[R - 1] === nums[R]) R--;
         L++;
         R--;
       }
-      else if (sum < 0) L++;  //移动左指针继续判断
-      else if (sum > 0) R--;  //移动右指针继续判断
+      else if (sum > 0) R--;
+      else if (sum < 0) L++;
     }
   }
   console.timeEnd()
-  return jing;
-};
+  return result
+}
 
-console.log(threeSum([-1, 0, 1, 2, -1, -4]))
+console.log(threeSum([-1, 0, 1, 2, -1, -4, 3, 2]))
