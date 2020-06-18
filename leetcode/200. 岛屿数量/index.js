@@ -26,3 +26,6 @@ var numIslands = function (grid) {
   }
   return res;
 };
+
+let jing = [["1", "1", "1", "1", "0"], ["1", "1", "0", "1", "0"], ["1", "1", "0", "0", "0"], ["0", "0", "0", "0", "0"]]
+console.log(numIslands(jing))
