@@ -16,6 +16,3 @@ const findMax = arr => {
 }
 
 console.log(findMax(arr))
-
-
-

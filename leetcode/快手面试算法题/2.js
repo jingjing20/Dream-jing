@@ -16,7 +16,7 @@ for (let i = 0; i < arr.length; i++) {
   })
 }
 console.log(arr)
-console.log(JSON.stringify(arr))
+// console.log(JSON.stringify(arr))
 
 
 
