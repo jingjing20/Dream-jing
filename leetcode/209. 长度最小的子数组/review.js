@@ -1,7 +1,8 @@
-// 滑动窗口问题
-// 扩张窗口：找可行解的过程，找到了就不再扩张
-// 收缩窗口：在长度上优化该可行解，直到条件被破坏
-// 然后寻找下一个可行解，然后再优化……
+//思路：
+// 定义一个存放最小值的变量 min 初始化最大利润 profit = 0
+// 开始遍历数组，如果当前遍历元素的值小于 min 更新 min。
+// 否则用当前遍历元素的值减去 min 得到 profit 和当前 profit 取最大值
+
 /**
  * @param {number} s
  * @param {number[]} nums
@@ -10,13 +11,11 @@
 var minSubArrayLen = function (s, nums) {
   let i = 0,
     j = 0,
-    minLen = Infinity,
     sum = 0;
+  let minLen = Infinity;
   while (j < nums.length) {
-    //扩张找可行解
     sum += nums[j];
     while (sum >= s) {
-      //收缩找最优解
       minLen = Math.min(minLen, j - i + 1);
       sum -= nums[i];
       i++;
