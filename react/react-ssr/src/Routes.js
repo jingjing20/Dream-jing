@@ -17,7 +17,7 @@ export default [
         component: Home
       },
       {
-        path: '/login',
+        path: '/login',     
         component: Login
       }
     ]

@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 // 商品模块的数据管理分离
-import products from './modules/products'; 
+import products from './modules/products';
 //集中管理products数据
 import cart from './modules/cart' //集中模块化管理cart
 Vue.use(Vuex)
@@ -18,9 +18,10 @@ export default new Vuex.Store({
     // 所有状态 放在这里
   },
   mutations: {
+
   },
   actions: {
-    
+
   },
   modules: {
     // cart, // 当应用复杂起来的时候
