@@ -38,8 +38,7 @@ new Promise((resolve) => (console.log("0"), resolve())).then(
 
 setTimeout(function () {
   console.log("2");
-
-  new Promise((resolve) => resolve()).then(console.log("3"));
+  new Promise((resolve) =>   resolve()).then(console.log("3"))
 }, 0);
 console.log("4");
 console.log("5");
