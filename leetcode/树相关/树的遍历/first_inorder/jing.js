@@ -1,4 +1,4 @@
-// 先序遍历：中，左，右
+// 先序遍历：左，中，右
 const TreeNode = {
   val: 1,
   left: {
