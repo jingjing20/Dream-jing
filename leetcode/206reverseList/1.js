@@ -11,7 +11,7 @@ var reverseList = function (head) {
         let next = cur.next; // 后继结点
         cur.next = pre; //反过来来 将当前结点的指针指向前一个结点 
         pre = cur; //前驱结点变成当前结点
-        cur = next; //后继结点变成成当前结点
+        cur = next; //当前结点变成后继结点
     }
     return pre
 }
