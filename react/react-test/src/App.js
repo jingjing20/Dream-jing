@@ -15,10 +15,15 @@ const oriTargetKeys = mockData.filter(item => +item.key % 3 > 1).map(item => ite
 
 class App extends React.Component {
   state = {
-    targetKeys: [],
+    targetKeys: oriTargetKeys,
     selectedKeys: [],
     disabled: false,
   };
+
+  componentDidMount() {
+    console.log(mockData);
+    console.log(this.state);
+  }
 
   handleChange = (nextTargetKeys, direction, moveKeys) => {
     this.setState({ targetKeys: nextTargetKeys });
@@ -53,6 +58,12 @@ class App extends React.Component {
           titles={['可用的指标', '已选的指标']}
           targetKeys={targetKeys}
           selectedKeys={selectedKeys}
+          operations={['to right', 'to left']}
+          listStyle={{
+            width: 250,
+            height: 300,
+          }}
+          showSearch
           onChange={this.handleChange}
           onSelectChange={this.handleSelectChange}
           onScroll={this.handleScroll}
