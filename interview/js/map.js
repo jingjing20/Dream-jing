@@ -1,5 +1,6 @@
 const arr = [{ age: 10 }, { age: 20 }]
 Array.prototype.Mymap = function (cb) {
+  console.log(this);
   let t = [];
   for (let i = 0; i < this.length; i++) {
     t.push(cb(this[i]))
@@ -9,21 +10,19 @@ Array.prototype.Mymap = function (cb) {
 
 Array.prototype.jingmap = function (cb) {
   return this.reduce((acc, cur) => {
-    console.log(cur)
-    console.log(cb(cur))
     let res = cb(cur)
     return acc.concat(res)
   }, [])
 }
 
-const newArr = arr.jingmap(e => {
+const newArr = arr.Mymap(e => {
   return {
     ...e,
     age: e.age * 5
   }
 })
 
-console.log(newArr)
+console.log(newArr, '------')
 
 const jing = [10, 20, 30];
 const sum = jing.reduce((acc, cur) => {
