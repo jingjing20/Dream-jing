@@ -2,10 +2,6 @@
  * @param {number[]} nums
  * @return {number}
  */
-/**
- * @param {number[]} nums
- * @return {number}
- */
 function findMin(nums) {
   for(let i = 1; i < nums.length; i++) {
     if(nums[i-1] > nums[i]) {
