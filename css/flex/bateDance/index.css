@@ -1,0 +1,25 @@
+body{
+  height: 1000px;
+  font-size: 36px;
+}
+.danc {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.danc :nth-child(1) {
+  height: 50%;
+  color: blueviolet;
+  align-self: flex-start;
+}
+.danc :nth-child(2) {
+  height: 50%;
+  color: aqua;
+  align-self: center;
+}
+.danc :nth-child(3) {
+  /* height: 33%; */
+  color: rgb(216, 179, 17);
+  align-self: flex-end;
+}
