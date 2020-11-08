@@ -14,9 +14,17 @@ async1();
 new Promise(function (resolve) {
   console.log('promise1');
   resolve();
-})
-  .then(function () {
-    console.log('promise2');
-  });
+}).then(function () {
+  console.log('promise2');
+});
 console.log('script end');
-// async await = 把这个任务放到 promise 的回调里面去
+
+// script start
+// async1 start
+// async2
+// promise1
+// script end
+// async1 end
+// promise2
+// setTimeout
+
