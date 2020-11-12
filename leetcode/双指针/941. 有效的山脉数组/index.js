@@ -11,14 +11,15 @@
  * @return {boolean}
  */
 var validMountainArray = function (A) {
-  if (A.length < 3) return false;
-  let left = 0;
-  let right = A.length - 1;
-  while (left < A.length - 2 && A[left] < A[left + 1]) {
-    left++;
+  let i = 0, j = A.length - 1;
+  while (i < A.length - 1 && A[i] < A[i + 1]) {
+    i++;
   }
-  while (right > 1 && A[right] < A[right - 1]) {
-    right--;
+  while (j >= 1 && A[j] < A[j - 1]) {
+    j--;
   }
-  return left === right;
+  if (i !== 0 && i === j && j !== A.length - 1) {
+    return true;
+  }
+  return false;
 };
