@@ -4,23 +4,24 @@
  */
 var sortArrayByParityII = function (A) {
   const n = A.length;
-  const res = Array(n);
+  const ans = Array(n);
   let i = 0;
-  for (const val of A) {
+  for (let val of A) {
     if (!(val & 1)) {
-      res[i] = val;
+      ans[i] = val;
       i += 2;
     }
   }
   i = 1;
-  for (const val of A) {
+  for (let val of A) {
     if (val & 1) {
-      res[i] = val;
+      ans[i] = val;
       i += 2;
     }
   }
-  return res;
-};
+  return ans;
+}
 
-let arr = [3, 6, 5, 1, 4];
+
+let arr = [3, 6, 5, 2, 4, 9];
 console.log(sortArrayByParityII(arr))
