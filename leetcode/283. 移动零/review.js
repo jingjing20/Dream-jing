@@ -1,16 +1,17 @@
 var moveZeroes = function (nums) {
-	let index = 0;
+	let j = 0;
 	for (let i = 0; i < nums.length; i++) {
+		// 非 0 元素往前放
 		if (nums[i] !== 0) {
-			nums[index] = nums[i];
-			index++;
+			nums[j] = nums[i];
+			j++;
+			if (i !== j) {
+				nums[i] = 0;
+			}
 		}
-	}
-	for (let i = index; i < nums.length; i++) {
-		nums[i] = 0;
 	}
 	return nums;
 };
 
-let arr = [2, 4, 0, 5, 0, 1];
+let arr = [0, 9, 6, 0, 2, 4, 0, 5, 0, 1];
 console.log(moveZeroes(arr));
