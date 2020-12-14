@@ -14,5 +14,5 @@ var maxArea = function (height) {
 
 // 时间复杂度：O(n)
 
-console.timeEnd(); // 0.104ms
 console.log(maxArea([1, 8, 6, 2, 5, 4, 8, 3, 7])); // 49
+console.timeEnd(); // 0.104ms
