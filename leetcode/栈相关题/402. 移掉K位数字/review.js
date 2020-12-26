@@ -13,14 +13,16 @@
  * 2、当遍历完成后 如果 k > 0，就继续从数组里面 pop() 元素，直到 k = 0。
  */
 var removeKdigits = function (num, k) {
-	let stack = [];
+	let stack = []; // 单调栈
 	for (let i = 0; i < num.length; i++) {
 		const c = num[i];
-		while (k > 0 && stack.length && stack[stack.length - 1] > c) {
+		while (k > 0 && stack.length && c < stack[stack.length - 1]) {
 			stack.pop();
 			k--;
 		}
-		stack.push(c);
+		if (c !== '0' || stack.length > 0) {
+			stack.push(c);
+		}
 	}
 	while (k > 0) {
 		stack.pop();
