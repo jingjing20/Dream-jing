@@ -35,10 +35,14 @@ var levelOrder = function (root) {
 	let quene = [root];
 	while (quene.length > 0) {
 		let arr = [];
-		const node = quene.shift();
-		arr.push(node.val);
-		if (node.left) quene.push(node.left);
-		if (node.right) quene.push(node.right);
+		let len = quene.length;
+		while (len--) {
+			const node = quene.shift();
+			arr.push(node.val);
+			if (node.left) quene.push(node.left);
+			if (node.right) quene.push(node.right);
+		}
+		res.push(arr);
 	}
 	return res;
 };
