@@ -10,8 +10,8 @@ Function.prototype.myBind = function (thisArg) {
 		const isNew = this instanceof result;
 		return fn.apply(isNew ? this : thisArg, otherArgs.concat(resultArgs));
 	};
-	// 绑定原型，保证原函数的原型对象的属性不丢失
-	result.prototype = Object.create(this.prototype);
+	// 绑定原型，保证原函数的原型对象的属性不丢失，result 是调用 myBind 要返回的函数，下面的 this 是调用 myBind 的函数。把 this 上的原型绑定到返回的函数上面。
+	result.prototype = this.prototype;
 	// 返回结果
 	return result;
 };
@@ -29,3 +29,6 @@ console.log(cat, cat.say());
 if (cat.say() === "I'm a white cat" && cat instanceof Cat && cat instanceof Animal) {
 	console.log('success');
 }
+
+// Animal { name: 'cat', color: 'white' } I'm a white cat
+// success

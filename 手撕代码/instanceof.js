@@ -10,6 +10,6 @@ const myInstanceof = (left, right) => {
 	return false;
 };
 
-console.log(myInstanceof(2, Number)); //jing-log
-console.log(myInstanceof([], Number)); //jing-log
-console.log(myInstanceof([], Object)); //jing-log
+console.log(myInstanceof(2, Number)); // true
+console.log(myInstanceof([], Number)); // false
+console.log(myInstanceof([], Object)); // true

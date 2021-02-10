@@ -18,8 +18,8 @@ var foo = {
 };
 var name = 'Chirs';
 function bar(job, age) {
-	console.log(this.name, '---');
-	console.log(job, age, '+++');
+	console.log(this.name);
+	console.log(job, age);
 }
 bar.myCall(foo, 'programmer', 20);
 // Selina programmer 20
