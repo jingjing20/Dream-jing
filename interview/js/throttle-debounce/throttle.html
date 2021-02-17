@@ -1,37 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
+	<body>
+		<!-- <button id="add">add</button> -->
+		<input type="text" id="add" />
+	</body>
 
-<body>
-  <!-- <button id="add">add</button> -->
-  <input type="text" id="add">
-</body>
+	<script>
+		//封装一个节流函数 接受一个时间 和这段时间过后需要执行的函数
+		function throttle(fn, delay) {
+			let prevTime = Date.now();
+			return (...args) => {
+				let curTime = Date.now();
+				if (curTime - prevTime > delay) {
+					fn.apply(this);
+					prevTime = curTime;
+				}
+			};
+		}
 
-<script>
-  //封装一个节流函数 接受一个时间 和这段时间过后需要执行的函数
-  function throttle(func, wait) {
-    let prev = Date.now();
-
-    return function () {
-      let now = Date.now();
-      if (now - prev > wait) {
-        func();
-        prev = now;
-      }
-    }
-  }
-
-  const delay = 2000;
-  const add = document.getElementById('add')
-  console.log(add)
-  add.oninput = throttle(function () {
-    console.log('jing')
-  }, delay)
-</script>
-
+		const delay = 2000;
+		const add = document.getElementById('add');
+		add.oninput = throttle(function () {
+			console.log('jing');
+		}, delay);
+	</script>
 </html>
