@@ -9,7 +9,7 @@ function throttle(fn, delay) {
 	return (...args) => {
 		let curTime = Date.now();
 		if (curTime - prevTime > delay) {
-			fn.apply(this);
+			fn.apply(this, args);
 			prevTime = curTime;
 		}
 	};
