@@ -19,6 +19,22 @@ class EventEmitter {
 		this.eventMap[type].push(handler);
 	}
 
+	once(type, handler) {
+		// hanlder 必须是一个函数，如果不是直接报错
+		if (!(handler instanceof Function)) {
+			throw new Error('哥 你错了 请传一个函数');
+		}
+		let _this = this;
+		if (!this.eventMap[type]) {
+			this.eventMap[type] = [];
+		}
+		const fn = function () {
+			handler.apply(_this, arguments);
+			_this.off(type, fn);
+		};
+		this.eventMap[type].push(fn);
+	}
+
 	off(type, handler) {
 		if (this.eventMap[type]) {
 			this.eventMap[type] = this.eventMap[type].filter((item) => item !== handler);
@@ -48,7 +64,7 @@ const lister02 = () => {
 };
 
 emitter.on('click', lister01);
-emitter.on('click', lister02);
+emitter.once('click', lister02);
 
 emitter.emit('click');
 emitter.off('click', lister01);
