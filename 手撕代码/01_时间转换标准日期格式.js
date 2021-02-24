@@ -1,5 +1,6 @@
 /**
  * 月份记得加 1
+ * getDay()获取的是星期几对应的数字 getDate()才是获取日的
  * @param {Date} time
  */
 function translate(time) {
@@ -23,7 +24,7 @@ function translate(time) {
 			res = '2天前';
 			break;
 		case interval > 60 * 1000 * 60 * 24 * 2:
-			res = time.getFullYear() + '-' + addZero(time.getMonth() + 1) + '-' + addZero(time.getDay());
+			res = time.getFullYear() + '-' + addZero(time.getMonth() + 1) + '-' + addZero(time.getDate());
 		default:
 			break;
 	}
