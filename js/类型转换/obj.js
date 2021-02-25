@@ -7,6 +7,9 @@ let obj = {
 		console.log('toString');
 		return 'toString';
 	},
+	[Symbol.toPrimitive]() {
+		return 1;
+	},
 };
 
 console.log('-------------');
@@ -30,3 +33,23 @@ console.log(obj > 'jing');
 
 // ? 上面第三步描述上好像有点缺陷 如果对象的 value() 方法返回的不是一个原始值怎么操作?
 // 如果valueOf() 返回的不是原始类型而是一个引用类型的值 就会继续走对象上的 toString() 方法
+
+class Bar {
+	constructor() {
+		this[Symbol.toPrimitive] = function (hint) {
+			switch (hint) {
+				case 'number':
+					return 3;
+				case 'string':
+					return 'string bar';
+				case 'default':
+				default:
+					return 'default bar';
+			}
+		};
+	}
+}
+let bar = new Bar();
+console.log(3 + bar); // "3default bar"
+console.log(3 - bar); // 0
+console.log(String(bar)); // "string bar"

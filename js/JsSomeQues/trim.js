@@ -4,7 +4,7 @@
 // console.log(newArr)
 
 function trim(str) {
-	var reg = /^\s+|\s+$/g;
+	var reg = /^\s+|\s+$/g; //  ^\s+ 代表从空格开始匹配一个或者连续的空格  \s+$ 代表匹配以空格结尾的所有空格
 
 	// \s 代表匹配空格
 	//  ^ 匹配输入的开始 例如，/^A/ 并不会匹配 "an A" 中的 'A'，但是会匹配 "An E" 中的 'A'。

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<ul id="poem">
+			<li>床前明月光</li>
+			<li>疑是地上霜</li>
+			<li>举头望明月</li>
+			<li>低头思故乡</li>
+			<li>锄禾日当午</li>
+			<li>汗滴禾下土</li>
+			<li>谁知盘中餐</li>
+			<li>粒粒皆辛苦</li>
+			<li>背不动了</li>
+			<li>我背不动了</li>
+		</ul>
+	</body>
+	<script>
+		var ul = document.getElementById('poem');
+		ul.addEventListener('click', function (e) {
+			console.log(e.target.innerHTML);
+			console.log(e.currentTarget); //jing-log
+		});
+	</script>
+</html>
