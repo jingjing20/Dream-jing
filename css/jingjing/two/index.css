@@ -1,14 +1,14 @@
-.grid{
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 相当于 1fr 1fr 1fr */
-  grid-template-rows: repeat(3, 1fr); /* fr单位可以将容器分为几等份 */
-  grid-gap: 1%; /* grid-column-gap 和 grid-row-gap的简写 */
-  grid-auto-flow: row column;
+.grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 相当于 1fr 1fr 1fr */
+	grid-template-rows: repeat(3, 1fr); /* fr单位可以将容器分为几等份 */
+	grid-gap: 1%; /* grid-column-gap 和 grid-row-gap的简写 */
+	grid-auto-flow: row column;
 }
-.grid>div{
-  color: blueviolet;
-  font-size: 50px;
-  line-height: 2;
-  text-align: center;
-  background: red;
+.grid > div {
+	color: blueviolet;
+	font-size: 50px;
+	line-height: 5;
+	text-align: center;
+	background: red;
 }

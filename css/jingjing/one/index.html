@@ -1,61 +1,61 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+		}
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<style>
-  * {
-    padding: 0;
-    margin: 0;
-  }
+		.jing {
+			position: relative;
+			top: 1020px;
+			left: 520px;
+		}
 
-  .jing {
-    position: relative;
-    top: 1020px;
-    left: 520px;
-  }
+		button {
+			display: block;
+		}
+	</style>
 
-  button {
-    display: block;
-  }
-</style>
+	<body>
+		<button class="jing">jingjing</button>
+		<button class="jing">jing</button>
+		<div class="jing"></div>
+	</body>
+	<script>
+		let hao = document.querySelector('button');
+		console.log(hao);
+		let a = document.getElementsByClassName('jing');
+		console.log(a);
+		let jing = hao.getBoundingClientRect();
+		console.log(jing);
+		const delay = 2000;
+		function throttle(func, wait) {
+			let prev = Date.now();
 
-<body>
-  <button class="jing">jingjing</button>
-  <button class="jing">jing</button>
-  <div class="jing"></div>
-</body>
-<script>
-  let hao = document.querySelector('button')
-  console.log(hao)
-  let a = document.getElementsByClassName('jing')
-  console.log(a)
-  let jing = hao.getBoundingClientRect()
-  console.log(jing)
-  const delay = 2000
-  function throttle(func, wait) {
-    let prev = Date.now()
-
-    return function () {
-      let now = Date.now()
-      if (now - prev > wait) {
-        func()
-      }
-      prev = now
-    }
-  }
-  document.addEventListener('scroll', throttle(function () {
-    let x = hao.offsetLeft + window.scrollX;
-    let y = hao.offsetTop + window.scrollY;
-    console.log(x)
-    console.log(y)
-  }, delay))
-
-</script>
-
+			return function () {
+				let now = Date.now();
+				if (now - prev > wait) {
+					func();
+				}
+				prev = now;
+			};
+		}
+		document.addEventListener(
+			'scroll',
+			throttle(function () {
+				let x = hao.offsetLeft + window.scrollX;
+				let y = hao.offsetTop + window.scrollY;
+				console.log(x);
+				console.log(y);
+			}, delay)
+		);
+	</script>
 </html>
 
 <!-- 获取一个元素的位置 -->
