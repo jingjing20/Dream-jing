@@ -6,7 +6,7 @@ Function.prototype.myApply = function (thisArg, args) {
 	// 保存this
 	thisArg.fn = this;
 	// 执行代码
-	let res = thisArg.fn(...args); //重点代码，利用this指向，相当于context.caller(...args)
+	let res = thisArg.fn(...args);
 	// 删除变量 释放空间
 	delete thisArg.fn;
 	// 返回结果
