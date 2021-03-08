@@ -17,23 +17,17 @@ var DGpreorderTraversal = function (root) {
 
 // 非递归
 const preorderTraversal = (root) => {
-	if (root === null) {
-		return null;
-	}
 	const res = []; // 存放结果
-	const stack = [root]; // 当根节点不为空的时候，将根节点入栈
+	const stack = [];
+	if (root) stack.push(root); // 当根节点不为空的时候，将根节点入栈
 	while (stack.length > 0) {
 		const curNode = stack.pop();
 		// 第一步的时候，先访问的是根节点
 		res.push(curNode.val);
 		// 我们先打印左子树，然后右子树
 		// 所以先加入栈的是右子树，然后左子树
-		if (curNode.right !== null) {
-			stack.push(curNode.right);
-		}
-		if (curNode.left !== null) {
-			stack.push(curNode.left);
-		}
+		if (curNode.right) stack.push(curNode.right);
+		if (curNode.left) stack.push(curNode.left);
 	}
 	return res;
 };

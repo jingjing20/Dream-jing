@@ -15,9 +15,6 @@ const inorderTraversal = function (root) {
 };
 
 const DGinorderTraversal = (root) => {
-	if (root === null) {
-		return null;
-	}
 	const stack = [];
 	const res = [];
 	let p = root;
