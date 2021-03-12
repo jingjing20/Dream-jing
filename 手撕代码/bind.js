@@ -11,7 +11,8 @@ Function.prototype.myBind = function (thisArg) {
 		return fn.apply(isNew ? this : thisArg, otherArgs.concat(resultArgs));
 	};
 	// 绑定原型，保证原函数的原型对象的属性不丢失，result 是调用 myBind 要返回的函数，下面的 this 是调用 myBind 的函数。把 this 上的原型绑定到返回的函数上面。
-	result.prototype = this.prototype;
+	result.prototype = Object.create(this.prototype);
+	result.prototype.constructor = result;
 	// 返回结果
 	return result;
 };

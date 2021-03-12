@@ -4,7 +4,7 @@
  */
 function myPromiseAll(promises) {
 	// 参数校验
-	if (!promises || promises.length === 0) return;
+	if (promises.length === 0) return;
 	for (const promise of promises) {
 		if (!promise instanceof Promise) return;
 	}
@@ -31,7 +31,7 @@ function myPromiseAll(promises) {
 
 var promise1 = Promise.resolve(3);
 var promise2 = new Promise(function (resolve, reject) {
-	setTimeout(resolve, 3000, 'foo'); // setTimeout 的第三个参数是传给第一个入参的函数的参数
+	setTimeout(resolve, 3000, 'jing'); // setTimeout的第三个往后参数都是用来作为第一个参数也就是函数的参数,也就是其实是setTimeout(resolve('jing'), 3000)
 });
 var promise3 = 42;
 
