@@ -10,23 +10,23 @@
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function(head, n) {
-  const dummy = new ListNode(0)
-  dummy.next = head
-  let l = dummy
-  let r = dummy
-  let offset = n + 1
+var removeNthFromEnd = function (head, n) {
+	const dummy = new ListNode(0);
+	dummy.next = head;
+	let l = dummy;
+	let r = dummy;
 
-  while (offset--) {
-    r = r.next
-  }
+	while (n !== 0) {
+		r = r.next;
+		n--;
+	}
 
-  while (r) {
-    r = r.next
-    l = l.next
-  }
+	while (r.next !== null) {
+		r = r.next;
+		l = l.next;
+	}
 
-  l.next = l.next.next
+	l.next = l.next.next;
 
-  return dummy.next
-}
+	return dummy.next;
+};

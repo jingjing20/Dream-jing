@@ -10,21 +10,21 @@
  * @param {number} n
  * @return {ListNode}
  */
-var removeNthFromEnd = function(head, n) {
-  const dummyHead = new ListNode(0);  // 创建一个哑节点
-  dummyHead.next = head;
-  let left = dummyHead;
-  let right = dummyHead;
-  let time = n + 1
-  while(time--) {
-    right = right.next;
-  }
+var removeNthFromEnd = function (head, n) {
+	const dummyHead = new ListNode(0); // 创建一个哑节点
+	dummyHead.next = head;
+	let left = dummyHead;
+	let right = dummyHead;
+	while (n !== 0) {
+		right = right.next;
+		n--;
+	}
 
-  while(right) {
-    right = right.next;
-    left = left.next;
-  }
+	while (right.next !== null) {
+		right = right.next;
+		left = left.next;
+	}
 
-  left.next = left.next.next;
-  return dummyHead.next;
-}
+	left.next = left.next.next;
+	return dummyHead.next;
+};
