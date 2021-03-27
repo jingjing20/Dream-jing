@@ -21,13 +21,13 @@ const myNew = function (func, ...args) {
 	// 如果构造函数返回非空对象，则返回该对象;否则，返回刚创建的新对象。
 	return result && result instanceof Object ? result : obj;
 };
-// 测试
+// 测试简单构造函数
 // function Person(name, age) {
 // 	this.name = name;
 // 	this.age = age;
 // }
 
-// 用来测试返回引用数据类型
+// 用来测试构造函数返回了一个引用数据类型
 function Person(name, age) {
 	this.name = name;
 	this.age = age;
@@ -36,10 +36,13 @@ function Person(name, age) {
 	};
 }
 
+// 自己写的new
 console.log('myNew');
 const jing = myNew(Person, 'jing', 22);
 console.log(jing);
 jing();
+
+// 原生new
 console.log('new');
 const hao = new Person('hao', 23);
 console.log(hao);
