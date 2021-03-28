@@ -1,23 +1,24 @@
-function mySetInterval(handler, timeout) {
-	var tid;
+function mySetInterval(func, timeOut) {
+	let intervalId = 0; // 全局的id
 	return {
 		start() {
-			tid = setTimeout(() => {
-				handler();
-				this.start();
-			}, timeout);
+			intervalId = setTimeout(() => {
+				func(); // 执行函数
+				this.start(); // 递归调用
+			}, timeOut);
 		},
 		stop() {
-			return clearTimeout(tid);
+			clearTimeout(intervalId);
 		},
 	};
 }
 
-var timer = mySetInterval(() => console.log('setTimeout handler running'), 1000);
+const jing = mySetInterval(() => {
+	console.log('jing bao bei');
+}, 1000);
 
-timer.start();
+jing.start();
 
-// 2.5s后清除定时器
 setTimeout(() => {
-	timer.stop();
-}, 2500);
+	jing.stop();
+}, 5500);
