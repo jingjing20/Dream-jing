@@ -1,11 +1,11 @@
 /**
- * @param {string} s
- * @return {string[][]}
+ *
+ * @param {String} s
  */
-var partition = function (s) {
+function partition(s) {
 	let res = [];
 	let n = s.length;
-	function dfs(temp, start) {
+	const dfs = (temp, start) => {
 		if (start === n) {
 			res.push(temp.slice());
 			return;
@@ -18,10 +18,10 @@ var partition = function (s) {
 				temp.pop();
 			}
 		}
-	}
+	};
 	dfs([], 0);
 	return res;
-};
+}
 
 function isPalindrome(s, l, r) {
 	while (l < r) {
@@ -31,6 +31,3 @@ function isPalindrome(s, l, r) {
 	}
 	return true;
 }
-
-let s = 'babad';
-console.log(partition(s)); //jing-log

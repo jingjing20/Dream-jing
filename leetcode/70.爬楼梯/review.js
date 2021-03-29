@@ -7,13 +7,13 @@
 // 时间复杂度：O(n)
 
 function jingpalouti(num) {
-  let dp = [];
-  dp[0] = 1;
-  dp[1] = 1;
-  for(let i = 2; i <= num; i++) {
-    dp[i] = dp[i-1] + dp[i-2]
-  }
-  return dp[num]
+	let dp = [];
+	dp[0] = 1;
+	dp[1] = 1;
+	for (let i = 2; i <= num; i++) {
+		dp[i] = dp[i - 1] + dp[i - 2];
+	}
+	return dp[num];
 }
 
-console.log(jingpalouti(5))
+console.log(jingpalouti(5));
