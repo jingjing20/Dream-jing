@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		div {
+			width: 200px;
+			height: 200px;
+			padding: 20px;
+		}
+
+		.one,
+		.two,
+		.three,
+		.four {
+			position: absolute;
+		}
+
+		.one {
+			background: #f00;
+			outline: 5px solid #000;
+			top: 100px;
+			left: 200px;
+			z-index: 10;
+		}
+
+		.two {
+			background: #0f0;
+			outline: 5px solid #000;
+			top: 50px;
+			left: 75px;
+			z-index: 100;
+		}
+
+		.three {
+			background: #0ff;
+			outline: 5px solid #000;
+			top: 125px;
+			left: 25px;
+			z-index: 150;
+		}
+
+		.four {
+			background: #00f;
+			border: 5px solid #ff0;
+			top: 200px;
+			left: 220px;
+			z-index: 50;
+		}
+	</style>
+	<body>
+		<div class="one">
+			z-index: 10
+			<div class="two">z-index: 100</div>
+			<div class="three">z-index: 150</div>
+		</div>
+		<div class="four">z-index: 50</div>
+	</body>
+</html>
