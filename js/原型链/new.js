@@ -1,4 +1,4 @@
-var A = function () { };
+var A = function () {};
 A.prototype.n = 1;
 var b = new A();
 A.prototype.n = 5;
@@ -14,5 +14,3 @@ console.log(b.m);
 
 console.log(c.n);
 console.log(c.m);
-
-

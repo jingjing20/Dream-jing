@@ -1,15 +1,21 @@
 // var x = 0;
-function foo() {
-	x = 2;
-	return function () {
-		console.log(x); //jing-log
-	};
-	var x = 8;
-}
-foo()();
-// function add(num1, num2) {
-// 	var sum = num1 + num2;
-// 	return sum;
+// function foo() {
+// 	var x = 2;
+// 	return function () {
+// 		console.log(x); //jing-log
+// 	};
+// 	var x = 8;
 // }
-// add(10, 20);
-// console.log(sum); //jing-log
+// // 闭包
+// foo()();
+
+var name = 'a';
+var obj = {
+	name: 'b',
+	getName: () => {
+		return this.name;
+	},
+};
+
+var getName = obj.getName;
+console.log(obj.getName(), getName()); //jing-log
