@@ -3,15 +3,32 @@
  * @param {number} m
  * @param {number[]} nums2
  * @param {number} n
- * @return {void}
+ * @return {void} Do not return anything, modify nums1 in-place instead.
  */
-var merge = function (nums1, m, nums2, n) {
-	let len = m + n - 1;
-	while (m > 0 && n > 0) {
-		nums1[len--] = nums1[m - 1] < nums2[n - 1] ? nums2[--n] : nums1[--m];
+const merge = (nums1, m, nums2, n) => {
+	let index1 = m - 1;
+	let index2 = n - 1;
+	let tail = m + n - 1;
+
+	while (index1 >= 0 && index2 >= 0) {
+		if (nums1[index1] > nums2[index2]) {
+			nums1[tail] = nums1[index1];
+			index1--;
+		} else {
+			nums1[tail] = nums2[index2];
+			index2--;
+		}
+		tail--;
 	}
-	if (n > 0) {
-		nums1.splice(0, n, ...nums2.slice(0, n));
+	while (tail >= 0 && index1 >= 0) {
+		nums1[tail] = nums1[index1];
+		index1--;
+		tail--;
+	}
+	while (tail >= 0 && index2 >= 0) {
+		nums1[tail] = nums2[index2];
+		index2--;
+		tail--;
 	}
 	return nums1;
 };
