@@ -1,6 +1,6 @@
 // 方法一
 function format(str) {
-	str = str.toString();
+	str = str + '';
 	let length = str.indexOf('.');
 	let result = '',
 		stuffix = '',
@@ -21,7 +21,7 @@ function format(str) {
 	return result;
 }
 
-console.log(format(114290023.6789));
+console.log(format(114290023.6725));
 
 // 方法二: toLocaleString()方法
 const res = (114290023.6725).toLocaleString();

@@ -69,7 +69,7 @@ function limitTask1(tasks, limit) {
 	});
 }
 console.time('1');
-limitTask1([createTask(2000), createTask(2000), createTask(1000)], 2).then((res) => {
+limitTask([createTask(2000), createTask(2000), createTask(1000), createTask(2000), createTask(2000)], 2).then((res) => {
 	console.timeEnd('1');
 	console.log(res);
 });
