@@ -1,6 +1,6 @@
 // 后序遍历
 
-const root = require('./bt');
+const root = require('../bt');
 
 var DGpostorderTraversal = function (root) {
 	let arr = [];

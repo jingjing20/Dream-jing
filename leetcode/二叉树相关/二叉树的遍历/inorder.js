@@ -1,6 +1,6 @@
 // 中序遍历
 
-const root = require('./bt');
+const root = require('../bt');
 
 const inorderTraversal = function (root) {
 	let arr = [];

@@ -1,6 +1,6 @@
 // 先序遍历
 
-const root = require('./bt');
+const root = require('../bt');
 
 // 递归
 var DGpreorderTraversal = function (root) {
