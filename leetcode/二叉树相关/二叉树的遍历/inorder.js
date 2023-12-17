@@ -31,4 +31,4 @@ const DGinorderTraversal = (root) => {
 };
 
 console.log(DGinorderTraversal(root));
-console.log(inorderTraversal(root));
+// console.log(inorderTraversal(root));
